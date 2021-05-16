@@ -28,6 +28,7 @@ site can help us get a little bit more organized.
     * [Site Owner Goals](#site-owner-goals)
     * [Design](#design) 
 * [**Wireframes**](#wireframes)
+* [**Database Structure**](#database-structure)
 * [**Features**](#features)
 * [**Technologies Used**](#technologies-used)
     * [Languages](#languages)
@@ -52,8 +53,8 @@ site can help us get a little bit more organized.
 
 ### User Stories
 
-* As a user I want to, be able to register a Username and a Password
-* As a user I want to, be able to Login
+* As a user I want to, be able to register a uniqe Username and a Password
+* As a user I want to, be able to Login and Logout
 * As a user I want to, add/create as many crystals as I want to
 * As a user I want to, add information about each crystal
 * As a user I want to, be able to search for specific properties 
@@ -70,7 +71,7 @@ site can help us get a little bit more organized.
 #### Fonts:
 
 I used fonts from [Google Fonts](https://fonts.google.com/)
-* [Fontname]
+* [Fontname] text
 
 #### Images:
 
@@ -78,7 +79,7 @@ Text about image source
 
 #### Color: 
 
-I wanted to use colors that match the moon background image.
+Text about colors
 
 ![Color palette](assets/images/color-palette.png)
 
@@ -102,11 +103,21 @@ Balsamiq was used to create the wireframes for this project
 
 [Back to top](#table-of-content)
 
+## Database Structure
+
+Add tables here
+
+[Back to top](#table-of-content)
 
 ## Features
 * Responsive on different devices
-* 
-* 
+* Login and Logout functionallity
+* Search crystals by properties, color or journal
+* CRUD:
+    * Create - Possability to add new crystals and to journal the usage
+    * Read - Possability to view the added information about each crystal and to see when and how it was last used
+    * Update - Possability to update the information and the journal for each crystal 
+    * Delete - Possability to delete a crystal and/or the journal 
 
 [Back to top](#table-of-content)
 
