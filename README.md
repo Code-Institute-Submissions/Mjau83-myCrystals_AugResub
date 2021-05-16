@@ -7,13 +7,17 @@
 
 ## Project Goals
 **What is it?** 
-Text
+A simple way to store information about your crystals so that you can access the information when you need it.
 
 **Who is it for?**
-Text
+This is for any healer, witch, yogi or anyone that likes spriritual stuff and might use crystals in their daily life, 
+in rituals, meditaion or other practices. 
 
 **Why am I building it?**
-Text
+Almost everytime when I'm going to use a crystal for a specific purpose I need to check my crystal box to see what 
+I have, and if I can't remember what it's used for I also need to turn to Google to find out the specific properties.
+After asking around in different spriritually themed communities it turned out that I wasn't alone. I hope that this 
+site can help us get a little bit more orgnized.
 
 
 ## Table of Content
