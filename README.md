@@ -1,59 +1,291 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# myCrystals
+### A handy way to organize your crystals
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+![Responsive Image](assets/images/responsive-image.png)
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Project Goals
+**What is it?** 
+Text
 
-`python3 -m http.server`
+**Who is it for?**
+Text
 
-A blue button should appear to click: _Make Public_,
+**Why am I building it?**
+Text
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Table of Content
 
-A blue button should appear to click: _Make Public_,
+* [**UX**](#ux)
+    * [User Goals](#user-goals)
+    * [User Stories](#user-stories)
+    * [Site Owner Goals](#site-owner-goals)
+    * [Design](#design) 
+* [**Wireframes**](#wireframes)
+* [**Features**](#features)
+* [**Technologies Used**](#technologies-used)
+    * [Languages](#languages)
+    * [Frameworks Libraries Programs](#frameworks-libraries-programs)
+* [**Testing**](#testing)
+    * [Bugs](#bugs)
+    * [To Do](#to-do)
+* [**Deployment**](#deployment)
+    * [GitHub Pages](#gitHub-pages)
+* [**Credits**](#credits)
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## UX
 
-To log into the Heroku toolbelt CLI:
+### User Goals
+* Text
+* Text
+* Text
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User Stories
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+* As a user I want to, 
+* As a user I want to, 
+* As a user I want to, 
 
-## Updates Since The Instructional Video
+### Site Owner Goals
+* Text
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Design
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Fonts:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+I used fonts from [Google Fonts](https://fonts.google.com/)
+* [Fontname]
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### Images:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Text about image source
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Color: 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+I wanted to use colors that match the moon background image.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Color palette](assets/images/color-palette.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[Back to top](#table-of-content)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
----
+## Wireframes
+Balsamiq was used to create the wireframes for this project
 
-Happy coding!
+* Desktop Wireframes
+    * [Index](wireframes/index.png)
+    * [ ]( )
+    
+* Tablet Wireframes
+    * [Index](wireframes/index-tablet.png)
+    * [ ]( )
+
+* Smartphone Wireframes 
+    * [Index](wireframes/index-sp.png)
+    * [ ]( )
+
+[Back to top](#table-of-content)
+
+
+## Features
+* Responsive on different devices
+* 
+* 
+
+[Back to top](#table-of-content)
+
+
+## Technologies Used
+### Languages
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks and Libraries 
+* [Google Fonts](https://fonts.google.com/) was used to import the fonts mentioned above 
+in the project
+??* [Coolors](https://coolors.co/) was used to decide on th colors and to create the color 
+palette
+* [Am I Responsive](http://ami.responsivedesign.is/) was used to make the mockup
+??* [Boostrap](https://getbootstrap.com/) was used to make the site responsive
+
+### Tools
+* [Balsamic](https://balsamiq.com) was used to create wireframes in the beginning of 
+the project
+* [Material.io](https://material.io/) was used to check that the contrast is ok
+??* [Gimp](https://www.gimp.org/) was used to edit photos.
+* [Favicon.cc](https://www.favicon.cc/) was used to create the fave icon
+* [Webformatter](https://webformatter.com/html) was used to beautify the code
+??* [Copressor.io](https://compressor.io/) was used to compress the background image
+* [Gitpod](https://gitpod.io/) was used for coding the project
+* [Github](https://github.com/) was used to save and stored on the project after being 
+pushed from Gitpod. Github was also use to deploy the site
+
+[Back to top](#table-of-content)
+
+
+## Testing
+
+?? The was tested for Android on Samsung A50 and Xperia 10. It was also tested on laptop
+and desktop view (PC).
+
+The code was tested with:
+* [W3C Markup Validator](https://validator.w3.org/)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [JSHint](https://jshint.com/)
+
+**Lighthouse**
+
+* Test 1
+
+![Lighthouse test 1](assets/images/lighthouse-test1.png)
+* Test 2
+
+![Lighthouse test 1](assets/images/lighthouse-test2.png)
+
+
+## User Stories
+**As a user I want to,  **
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
+
+**As a user I want to,  **
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
+
+**As a user I want to,  **
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
+
+
+[Back to top](#table-of-content)
+
+
+## Bugs
+
+**Name of bug**
+* **Bug**
+
+Text
+
+* **Fix**
+
+Text
+
+* **Verdict**
+
+Text
+
+**Name of bug**
+* **Bug**
+
+Text
+
+* **Fix**
+
+Text
+
+* **Verdict**
+
+Text
+
+[Back to top](#table-of-content)
+
+
+## To Do
+* 
+* 
+* 
+
+[Back to top](#table-of-content)
+
+
+## Deployment
+### GitHub Pages
+How to deploy project using Github pages:
+
+1. Go to Github
+2. Log in and click on “Repositories” tab in the top middle of the screen
+3. Choose this repository
+4. Click on the "Settings" tab (with a gear icon)
+5. Scroll down on the page until you find the "Github Pages" section
+6. Under "Source" you'll find a dropdown which is set to "none"
+7. Change it to "Master"
+8. Then click the save button. This will reload the page.
+9. Scroll back down to "Github Pages"
+10. A green alert box will now tell you that your site been published and provide you a link to the site.
+
+![Deployment Image](assets/images/deployment.png)
+
+[Back to top](#table-of-content)
+
+## Credits
+#### Inspiration 
+* [ ]( )
+* [ ]( )
+
+* Thank you to
+* A huge thank you to my mentor Simen Eventyret_mentor for all the good advices, feedback 
+and most of all patience.
+* Thank you to my older brother David who’s been a wonderful support in me deepest times of 
+dispear and helped me with testing and good advices to help me get a better understanding for the code.
+You're the best!
+
+[Back to top](#table-of-content)
