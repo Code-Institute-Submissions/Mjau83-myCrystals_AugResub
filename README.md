@@ -52,9 +52,14 @@ site can help us get a little bit more organized.
 
 ### User Stories
 
-* As a user I want to, 
-* As a user I want to, 
-* As a user I want to, 
+* As a user I want to, be able to register a Username and a Password
+* As a user I want to, be able to Login
+* As a user I want to, add/create as many crystals as I want to
+* As a user I want to, add information about each crystal
+* As a user I want to, be able to search for specific properties 
+* As a user I want to, be able to edit/update my information
+* As a user I want to, be able to delete a crystal 
+* As a user I want to, be able to journal when a crystal last was used
 
 ### Site Owner Goals
 * Text
