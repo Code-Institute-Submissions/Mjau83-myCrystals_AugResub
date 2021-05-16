@@ -103,11 +103,13 @@ Balsamiq was used to create the wireframes for this project
 
 [Back to top](#table-of-content)
 
+
 ## Database Structure
 
 Add tables here
 
 [Back to top](#table-of-content)
+
 
 ## Features
 * Responsive on different devices
@@ -121,12 +123,12 @@ Add tables here
 
 [Back to top](#table-of-content)
 
-
 ## Technologies Used
 ### Languages
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks and Libraries 
 * [Google Fonts](https://fonts.google.com/) was used to import the fonts mentioned above 
@@ -172,7 +174,7 @@ The code was tested with:
 
 
 ## User Stories
-**As a user I want to,  **
+**As a user I want to, be able to register a uniqe Username and a Password**
 
 * Plan
 
@@ -194,7 +196,7 @@ Text
 
 Text
 
-**As a user I want to,  **
+**As a user I want to, be able to Login and Logout**
 
 * Plan
 
@@ -216,7 +218,7 @@ Text
 
 Text
 
-**As a user I want to,  **
+**As a user I want to, add/create as many crystals as I want to**
 
 * Plan
 
@@ -238,6 +240,115 @@ Text
 
 Text
 
+**As a user I want to, add information about each crystal**
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
+
+**As a user I want to, be able to search for specific properties**
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
+
+**As a user I want to, be able to edit/update my information**
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
+
+**As a user I want to, be able to delete a crystal**
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
+
+**As a user I want to, be able to journal when a crystal last was used**
+
+* Plan
+
+Text
+
+* Implementation
+
+Text
+
+* Test
+
+Text
+
+* Result
+
+Text
+
+* Verdict 
+
+Text
 
 [Back to top](#table-of-content)
 
@@ -305,7 +416,7 @@ How to deploy project using Github pages:
 * [ ]( )
 * [ ]( )
 
-* Thank you to
+* Thank you to...
 * A huge thank you to my mentor Simen Eventyret_mentor for all the good advices, feedback 
 and most of all patience.
 * Thank you to my older brother David who’s been a wonderful support in me deepest times of 
