@@ -62,7 +62,8 @@ site can help us get a little bit more organized.
 * As a user I want to, be able to journal when a crystal last was used
 
 ### Site Owner Goals
-* Text
+* To have a site that is attractive to the spiritual community
+* Have good functionallity for the User
 
 ### Design
 
