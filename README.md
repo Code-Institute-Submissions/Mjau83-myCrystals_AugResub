@@ -17,7 +17,7 @@ in rituals, meditaion or other practices.
 Almost everytime when I'm going to use a crystal for a specific purpose I need to check my crystal box to see what 
 I have, and if I can't remember what it's used for I also need to turn to Google to find out the specific properties.
 After asking around in different spriritually themed communities it turned out that I wasn't alone. I hope that this 
-site can help us get a little bit more orgnized.
+site can help us get a little bit more organized.
 
 
 ## Table of Content
@@ -43,9 +43,12 @@ site can help us get a little bit more orgnized.
 ## UX
 
 ### User Goals
-* Text
-* Text
-* Text
+* The site should work on all devices
+* The User should be able to register a Username
+* The site should have a clear dashboard that is easy to navigate
+* The User should be able to add multiple crystals
+* The User shoud be able to check if a crystal is waterproof and/or sunproof
+* The User should be able to add information like name, color, properties etc about each crystal
 
 ### User Stories
 
