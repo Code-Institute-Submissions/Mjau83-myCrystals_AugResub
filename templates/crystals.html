@@ -6,6 +6,13 @@
     <title>myCrystals</title>
 </head>
 <body>
-    
+    {% for crystal in crystals %}
+        {{ crystal.crystal_name }}<br>
+        {{ crystal.color }}<br>
+        {{ crystal.usage }}<br>
+        {{ crystal.is_waterproof }}<br>
+        {{ crystal.is_sunproof }}<br>
+        {{ crystal.number_of_crystals }}<br>
+    {% endfor %}
 </body>
 </html>
