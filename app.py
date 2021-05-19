@@ -12,9 +12,12 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+mongo = PyMongo(app)
+
 
 @app.route("/")
-def hello():
+@app.route("/view_crystals")
+def view_crystals():
     return "Hello what's up!"
 
 
