@@ -42,7 +42,8 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-               
+        session["user"] = request.form.get("username").lower()
+        flash("You are registered and can start to add your crystals!")
     return render_template("register.html")
 
 
