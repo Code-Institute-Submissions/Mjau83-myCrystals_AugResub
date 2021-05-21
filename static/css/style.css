@@ -37,3 +37,19 @@ h3 {
     color: #69677D;
     background-color: #EAE0E6;
 }
+
+form i {
+    color: #69677D;
+}
+
+
+.btn {
+    color: #69677D;
+    background-color: #ECB9AC;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn:hover {
+    color: #ECB9AC;
+    background-color: #69677D
+}
