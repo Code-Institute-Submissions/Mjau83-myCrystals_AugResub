@@ -29,10 +29,6 @@ h3 {
     font-family: 'Poiret One', cursive;
 }
 
-.flashes h5 {
-    line-height: 3;
-}
-
 .card-panel {
     color: #69677D;
     background-color: #EAE0E6;
@@ -52,4 +48,20 @@ form i {
 .btn:hover {
     color: #ECB9AC;
     background-color: #69677D
+}
+
+#crystal-background {
+    height: 100vh;
+    background: url('../images/background-image.jpg') no-repeat bottom left fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative; 
+    opacity: 0.5;
+}
+
+.flashes h5 {
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
 }
