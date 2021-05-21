@@ -61,6 +61,10 @@ form i {
     opacity: 0.5;
 }
 
+.container {
+    width: 100%;
+}
+
 .flashes h5 {
     line-height: 1;
     font-family: 'Open Sans', sans-serif;
