@@ -141,7 +141,7 @@ palette
 ### Tools
 * [Balsamic](https://balsamiq.com) was used to create wireframes in the beginning of 
 the project
-* [Material.io](https://material.io/) was used to check that the contrast is ok
+* [WebAIM](https://webaim.org/resources/contrastchecker/) was used to check that the contrast is ok
 ??* [Gimp](https://www.gimp.org/) was used to edit photos.
 * [Favicon.cc](https://www.favicon.cc/) was used to create the fave icon
 * [Webformatter](https://webformatter.com/html) was used to beautify the code

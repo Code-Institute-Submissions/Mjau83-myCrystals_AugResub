@@ -1,6 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+.brand-logo {
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+nav {
+    background-color: #e4e4e4;
+}
+
+nav ul a {
+    color: #69677D;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+nav .brand-logo {
+    color: #69677D;
+}
+
+nav a {
+    color: #69677D;
+}
+
+h3 {
+    font-family: 'Poiret One', cursive;
+}
 
 .flashes h5 {
     line-height: 3;
+}
+
+.card-panel {
+    color: #69677D;
+    background-color: #EAE0E6;
 }
