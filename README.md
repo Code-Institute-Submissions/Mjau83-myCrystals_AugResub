@@ -355,18 +355,25 @@ Text
 
 ## Bugs
 
-**Name of bug**
+**Opacity bug**
 * **Bug**
 
-Text
+The opacity of the background image in index.html and register.html affects
+all the content on the page so that the card and form also gets more transparent.
 
 * **Fix**
 
-Text
+At first I had just added opacity to the #crystal-background in style.css.
+I then tried adding a div with the class of "opaque-overlay" after the "crystal-background" div, 
+and then giving it a z-index of -1 and the crystal-background a z-index of -2.
+I then gave opaque-overlay background-color of #ffffff and a opacity of 0.5
+That didn't solve the problem.
+After some reading on W3 Schools I change hex to rgba, and got it to work.
 
 * **Verdict**
 
-Text
+The background image is showing with a white opaque overlay without affecting the rest of the
+content on the page.
 
 **Name of bug**
 * **Bug**
