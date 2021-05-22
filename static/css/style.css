@@ -63,6 +63,7 @@ form i {
 
 .container {
     width: 100%;
+    max-width: none;
 }
 
 .flashes h5 {

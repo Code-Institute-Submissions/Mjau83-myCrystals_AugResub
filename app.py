@@ -19,6 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+def index():
+    return render_template('index.html')
+    
+
 @app.route("/view_crystals")
 def view_crystals():
     crystals = mongo.db.crystals.find()
