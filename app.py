@@ -25,7 +25,7 @@ def index():
 
 @app.route("/view_crystals")
 def view_crystals():
-    crystals = mongo.db.crystals.find()
+    crystals = list(mongo.db.crystals.find())
     return render_template("crystals.html", crystals=crystals)
 
 

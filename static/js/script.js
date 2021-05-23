@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
+    $('.tooltipped').tooltip();
   });
 
 var elem = document.querySelector('.collapsible.expandable');
