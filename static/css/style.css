@@ -9,7 +9,7 @@
 }
 
 nav {
-    background-color: #e4e4e4;
+    background-color: #f0f0f0;
 }
 
 nav ul a {
@@ -36,9 +36,23 @@ h3 {
 }
 
 /* ------ Cards and Forms */
+.card {
+    color: #69677D;
+    background-color: #ECB9AC;
+}
+
+.card a {
+    color: #69677D;
+    margin-left: 20px;
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    font-weight: 500;
+}
+
 .card-panel {
     color: #69677D;
     background-color: #EAE0E6;
+    border-radius: 8px;
 }
 
 form i {
@@ -49,6 +63,7 @@ form i {
     color: #69677D;
     background-color: #ECB9AC;
     font-family: 'Open Sans', sans-serif;
+    border-radius: 8px;
 }
 
 .btn:hover {
@@ -57,6 +72,7 @@ form i {
 }
 
 /* ------ Backgrounds */
+/*
 #crystal-background {
     height: 100vh;
     background: url('../images/background-image.jpg') no-repeat bottom left fixed;
@@ -81,8 +97,9 @@ form i {
 .container {
     width: 100%;
     max-width: none;
+    z-index: 0;
 }
-
+*/
 /* ------ Flash messages */
 .flashes h5 {
     line-height: 1;
