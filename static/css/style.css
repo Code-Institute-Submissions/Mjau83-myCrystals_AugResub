@@ -105,3 +105,18 @@ form i {
     line-height: 1;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* ------ Accordion */
+.collapsible-header {
+    color: #ffffff;
+    background-color: #69677D;
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.collapsible-body {
+    color: #000000;;
+    background-color: #EAE0E6;
+    font-family: 'Open Sans', sans-serif;
+}
