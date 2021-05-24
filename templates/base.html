@@ -24,7 +24,7 @@
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('view_crystals') }}">Crystals</a></li>
-                        <li><a href="{{ url_for('add_crystal')}}">Add Crystal</a></li>
+                        <li><a href="{{ url_for('add_crystal') }}">Add Crystal</a></li>
                         <li><a href="#">Journal</a></li>
                         <li ><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
@@ -36,16 +36,16 @@
         </nav>
         <!--  mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
-            <li class="active"><a href="{{ url_for('index')}}">Home</a></li>
+            <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('view_crystals') }}">Crystals</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('add_crystal')}}">Add Crystal</a></li>
+                <li><a href="{{ url_for('add_crystal') }}">Add Crystal</a></li>
                 <li><a href="#">Journal</a></li>
-                <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login')}}">Log In</a></li>
-                <li><a href="{{ url_for('register')}}">Register</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
 

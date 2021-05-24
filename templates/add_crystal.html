@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Add Crystal</h3>
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="color" type="text" class="validate">
+                    <label for="color">Color</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="usage" type="text" class="validate">
+                    <label for="usage">Usage</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="quantity" type="text" class="validate">
+                    <label for="quantity">Quantity</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

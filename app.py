@@ -104,7 +104,6 @@ def logout():
 @app.route("/add_crystal")
 def add_crystal():
     return render_template("add_crystal.html")
-    
 
 
 if __name__ == "__main__":
