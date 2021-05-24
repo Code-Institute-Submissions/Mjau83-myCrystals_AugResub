@@ -32,7 +32,7 @@ def view_crystals():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # does username already exists
+        # does username already exists?
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -55,12 +55,12 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # does username already exists
+        # does username already exists?
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # does password match user
+            # does password match user?
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
@@ -69,7 +69,7 @@ def login():
                     return redirect(url_for(
                         "profile", username=session["user"]))
             else:
-                # invalid passwod
+                # invalid password
                 flash("The Username and/or Password is incorrect. Please try again")
                 return redirect(url_for("login"))
 
@@ -99,6 +99,13 @@ def logout():
     flash("You are logged out")
     session.clear()
     return redirect(url_for("login"))
+
+
+@app.route("/add_crystal")
+def add_crystal():
+    return render_template("add_crystal.html")
+    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
