@@ -88,7 +88,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("crystals.html", username=username)
+        return render_template("pages/crystals.html", username=username)
 
     return redirect(url_for("login"))
 
@@ -103,7 +103,7 @@ def logout():
 
 @app.route("/add_crystal")
 def add_crystal():
-    return render_template("add_crystal.html")
+    return render_template("pages/add_crystal.html")
 
 
 if __name__ == "__main__":
