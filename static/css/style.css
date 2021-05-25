@@ -39,6 +39,7 @@ h3 {
 .card {
     color: #69677D;
     background-color: #ECB9AC;
+    pointer-events: auto;
 }
 
 .card a {
@@ -72,7 +73,7 @@ form i {
 }
 
 /* ------ Background displayed befor logging in */
-/*
+
 #crystal-background {
     height: 100vh;
     background: url('../images/background-image.jpg') no-repeat bottom left fixed;
@@ -81,7 +82,8 @@ form i {
     -o-background-size: cover;
     background-size: cover;
     position: relative; 
-    z-index: -2;
+    z-index: 0;
+    
 }
 
 .opaque-overlay {
@@ -91,15 +93,14 @@ form i {
     height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.75);
-    z-index: -1;
+    z-index: 1;
 } 
 
 .container {
     width: 100%;
     max-width: none;
-    z-index: 0;
 }
-*/
+
 /* ------ Flash messages */
 .flashes h5 {
     line-height: 1;

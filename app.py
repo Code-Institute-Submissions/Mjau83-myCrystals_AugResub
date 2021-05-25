@@ -23,8 +23,8 @@ def index():
     return render_template('index.html')
     
 
-@app.route("/view_crystals")
-def view_crystals():
+@app.route("/crystals")
+def view_crystals(username):
     crystals = list(mongo.db.crystals.find())
     return render_template("crystals.html", crystals=crystals)
 
