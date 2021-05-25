@@ -20,13 +20,13 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('pages/index.html')
     
 
 @app.route("/crystals")
 def view_crystals(username):
     crystals = list(mongo.db.crystals.find())
-    return render_template("crystals.html", crystals=crystals)
+    return render_template("pages/crystals.html", crystals=crystals)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -49,7 +49,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("You are registered and can start to add your crystals!")
         return redirect(url_for("profile", username=session["user"]))
-    return render_template("register.html")
+    return render_template("pages/register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -78,7 +78,7 @@ def login():
             flash("The Username and/or Password is incorrect. Please try again")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("pages/login.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
