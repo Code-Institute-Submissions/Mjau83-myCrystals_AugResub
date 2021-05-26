@@ -103,7 +103,8 @@ def logout():
 
 @app.route("/add_crystal")
 def add_crystal():
-    return render_template("pages/add_crystal.html")
+    chakras = mongo.db.chakras.find().sort("chakras", 1)
+    return render_template("pages/add_crystal.html", chakras=chakras)
 
 
 if __name__ == "__main__":
