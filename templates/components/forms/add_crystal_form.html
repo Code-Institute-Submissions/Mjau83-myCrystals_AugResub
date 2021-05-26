@@ -35,8 +35,24 @@
     </div>
     <div class="row">
         <div class="input-field col s12">
+            <select id="name_of_chakra" name="name_of_chakra" class="validate">
+                <option value="" disabled selected>Pick a Chakra</option>
+                {% for chakra in chakras %}
+                <option value="{{ chakra.name_of_chakra }}">{{ chakra.name_of_chakra }}</option>
+                {% endfor %}
+            </select>
+            <label for="name_of_chakra">Chakra</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
             <input id="quantity" name="quantity" type="text" class="validate" required>
             <label for="quantity">Quantity</label>
         </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="col s4 btn">
+            Submit
+        </button>
     </div>
 </form>

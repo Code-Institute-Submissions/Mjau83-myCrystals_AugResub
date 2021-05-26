@@ -8,60 +8,7 @@
             <h3 class="center-align">Add Crystal</h3>
 
             <div class="row">
-                <form class="col card-panel s12 m8 offset-m2" method="POST" action="">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="crystal_name"  name="crystal_name" minlength="3" maxlength="25" 
-                                type="text" class="validate" required>
-                            <label for="crystal_name">Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="color" name="color" minlength="3" maxlength="25"
-                                type="text" class="validate" required>
-                            <label for="color">Color</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="usage" name="usage" minlength="5" maxlength="250" 
-                                class="materialize-textarea" required></textarea>
-                            <label for="usage">Usage</label>
-                        </div>
-                    </div>  
-                    <div class="row">
-                        <label for="is_waterproof">
-                            <i class="fas fa-tint" id="drop-add"></i>
-                            <input id="is_waterproof" type="checkbox" class="filled-in" checked="checked" />
-                            <span>Waterproof</span>
-                        </label>
-                    </div>   
-                    <div class="row">
-                        <label for="is_sunproof">
-                            <i class="fas fa-sun" id="sun-add"></i>
-                            <input id="is_sunproof" type="checkbox" class="filled-in" checked="checked" />
-                            <span>Sunproof</span>
-                        </label>
-                    </div> 
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <select id="name_of_chakra" name="name_of_chakra" class="validate">
-                                <option value="" disabled selected>Pick a Chakra</option>
-                                {% for chakra in chakras %}
-                                    <option value="{{ chakra.name_of_chakra }}">{{ chakra.name_of_chakra }}</option>
-                                {% endfor %}
-                            </select>
-                            <label for="name_of_chakra">Chakra</label>
-                        </div>
-                    </div>
-                    <div class="row">   
-                        <div class="input-field col s12">
-                            <input id="quantity" name="quantity" type="text" class="validate" required>
-                            <label for="quantity">Quantity</label>
-                        </div>
-                    </div>
-                </form>
+                {% include components/forms/add_crystal_form.html %}
             </div>
         </div>
     </div>
