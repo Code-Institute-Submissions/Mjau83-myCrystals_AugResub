@@ -1,0 +1,9 @@
+<div class="input-field col s12">
+    <select id="name_of_chakra" name="name_of_chakra" class="validate">
+        <option value="" disabled selected>Pick a Chakra</option>
+        {% for chakra in chakras %}
+        <option value="{{ chakra.name_of_chakra }}">{{ chakra.name_of_chakra }}</option>
+        {% endfor %}
+    </select>
+    <label for="name_of_chakra">Chakra</label>
+</div>
