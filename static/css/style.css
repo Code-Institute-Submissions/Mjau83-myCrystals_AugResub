@@ -84,7 +84,17 @@ form i {
     background-size: cover;
     position: relative; 
     z-index: 0;
-    
+}
+
+#add-crystal-bg {
+    height: 100vh;
+    background: url('../images/add-crystal-bg-image.jpg') no-repeat bottom left fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative; 
+    z-index: 0;
 }
 
 .opaque-overlay {
