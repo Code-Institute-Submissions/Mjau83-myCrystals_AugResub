@@ -404,7 +404,11 @@ The username won't show at the top of the crystals.html
 
 * **Fix**
 
-Text
+Instead of just using {{ username }} in profile.html I changed it to url_for('profile', 
+username=session['user']). This shows */profile/username* at the top. I tried to figure out
+where this was comming from, and removed "/profile" from @app.route in app.py ending up with
+*@app.route ("/< username >"*. Now the profile.html shows *Hello /username* at the top, but
+I still got a "/" to much. 
 
 * **Verdict**
 
