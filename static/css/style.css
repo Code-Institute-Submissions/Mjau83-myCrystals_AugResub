@@ -109,10 +109,15 @@ form i {
 }
 
 /* ------ Accordion */
+.expandable {
+    margin: 6px 9px;
+}
+
 .collapsible-header {
     color: #ffffff;
     background-color: #69677D;
     padding: 8px 5px;
+    border-bottom: none;
 }
 
 #crystal-name {
