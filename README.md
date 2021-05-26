@@ -368,17 +368,39 @@ I then tried adding a div with the class of "opaque-overlay" after the "crystal-
 and then giving it a z-index of -1 and the crystal-background a z-index of -2.
 I then gave opaque-overlay background-color of #ffffff and a opacity of 0.5
 That didn't solve the problem.
-After some reading on W3 Schools I change hex to rgba, and got it to work.
+After some reading on W3 Schools I change hex to rgba, and got it to work. 
 
 * **Verdict**
 
 The background image is showing with a white opaque overlay without affecting the rest of the
 content on the page.
 
-**Name of bug**
+**Clickable bug**
 * **Bug**
 
-Text
+After adding the opaque overlay properly everything looked good, but it turned out
+that nothing on the page was clickable. Everthing worked fine in the navbar, but 
+the pointer wouldn't change when hovering over "Register" or "Log In" on index.html
+
+* **Fix**
+
+Once again I tried laborating with the z-index back and forth to see what could be
+the issue. As soon as I commented out #crystal-background in style.css everything
+worked again. After using developer tools and gotten some help from my mentor 
+understanding what was happeing, it turned out that the issue was within the card 
+class. So after adding *pointer-events* in style.css and setting it to *auto* and 
+changing the z-index to positive values for #crystal-background and .opaque-overlay
+I finaly got it to work.
+
+* **Verdict**
+
+Everything on the index.html page is now clickable and working as it should. 
+
+
+**Username bug**
+* **Bug**
+
+The username won't show at the top of the crystals.html
 
 * **Fix**
 
