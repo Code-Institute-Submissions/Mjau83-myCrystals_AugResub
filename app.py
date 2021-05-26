@@ -81,7 +81,7 @@ def login():
     return render_template("pages/login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab only the user's username from db
     username = mongo.db.users.find_one(
