@@ -39,6 +39,7 @@ h3 {
 .card {
     color: #69677D;
     background-color: #ECB9AC;
+    border-radius: 8px;
     pointer-events: auto;
 }
 

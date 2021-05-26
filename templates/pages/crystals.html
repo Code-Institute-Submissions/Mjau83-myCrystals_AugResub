@@ -1,12 +1,13 @@
 {% extends "layout/base.html" %}
 {% block content %}
 {% include "components/navigation.html" %}
-
+<!-- username won't show -->
+{% include "components/profile.html" %}
 
     <ul class="collapsible expandable">
         {% for crystal in crystals %}
         <li>
-            <div class="collapsible-header">
+            <div class="collapsible-header s12 md8 offset-m2">
                 <i class="far fa-gem"></i>
                 <h6 id="crystal-name">
                 {{ crystal.crystal_name }}

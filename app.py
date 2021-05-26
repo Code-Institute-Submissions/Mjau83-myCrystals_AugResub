@@ -21,10 +21,10 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
     return render_template('pages/index.html')
-    
+
 
 @app.route("/crystals")
-def view_crystals(username):
+def view_crystals():
     crystals = list(mongo.db.crystals.find())
     return render_template("pages/crystals.html", crystals=crystals)
 
