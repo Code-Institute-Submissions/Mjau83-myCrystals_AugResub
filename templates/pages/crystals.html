@@ -1,36 +1,44 @@
 {% extends "layout/base.html" %}
 {% block content %}
 {% include "components/navigation.html" %}
-<!-- username won't show properly -->
-{% include "components/profile.html" %}
+<div class="container">
+    <div id="add-crystal-bg">
+        <div class="opaque-overlay">
+            <!-- username won't show properly -->
+            {% include "components/profile.html" %}
 
-    <ul class="collapsible expandable">
-        {% for crystal in crystals %}
-        <li>
-            <div class="collapsible-header">
-                <i class="far fa-gem"></i>
-                <h6 id="crystal-name">
-                {{ crystal.crystal_name }}
-                </h6>
-                {% if crystal.is_waterproof == "yes" %}
-                    <i class="fas fa-tint tooltipped" id="drop-added"
-                    data-position="right" data-tooltip="Waterproof Crystal"></i>
-                {% endif %}
-                {% if crystal.is_sunproof == "yes" %}
-                    <i class="fas fa-sun tooltipped" id="sun-added"
-                    data-position="right" data-tooltip="Sunproof Crystal"></i>
-                {% endif %}
-            </div>
-            <div class="collapsible-body">
-                <h6>Color: </h6>
-                <p>{{ crystal.color }}</p>
-                <h6>Usage: </h6>
-                <p>{{ crystal.usage }}</p>
-                <h6>Quantity</h6>
-                <p>{{ crystal.number_of_crystals }}</p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
+            <ul class="collapsible expandable">
+                {% for crystal in crystals %}
+                <li>
+                    <div class="collapsible-header">
+                        <i class="far fa-gem"></i>
+                        <h6 id="crystal-name">
+                            {{ crystal.crystal_name }}
+                        </h6>
+                        {% if crystal.is_waterproof == "yes" %}
+                        <i class="fas fa-tint tooltipped" id="drop-added" data-position="right"
+                            data-tooltip="Waterproof Crystal"></i>
+                        {% endif %}
+                        {% if crystal.is_sunproof == "yes" %}
+                        <i class="fas fa-sun tooltipped" id="sun-added" data-position="right"
+                            data-tooltip="Sunproof Crystal"></i>
+                        {% endif %}
+                    </div>
+                    <div class="collapsible-body">
+                        <h6>Color: </h6>
+                        <p>{{ crystal.color }}</p>
+                        <h6>Usage: </h6>
+                        <p>{{ crystal.usage }}</p>
+                        <h6>Chakra: </h6>
+                        <p>{{ crystal.name_of_chakra }}</p>
+                        <h6>Quantity</h6>
+                        <p>{{ crystal.quantity }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
