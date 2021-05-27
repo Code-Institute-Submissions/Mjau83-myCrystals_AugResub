@@ -1,17 +1,15 @@
 {% extends "layout/base.html" %}
 {% block content %}
 {% include "components/navigation.html" %}
-<div class="container">
-    <div id="add-crystal-bg">
-        <div class="opaque-overlay">
-
-            <h3 class="center-align">Add Crystal</h3>
-
-            <div class="row">
-                {% include components/forms/add_crystal_form.html %}
+    <div class="container">
+        <div id="add-crystal-bg">
+            <div class="opaque-overlay">
+                <h3 class="center-align">Add Crystal</h3>
+                <div class="row">
+                    {% include "components/forms/add_crystal_form.html" %}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}

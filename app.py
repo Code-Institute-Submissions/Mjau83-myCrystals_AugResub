@@ -101,8 +101,23 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_crystal")
+@app.route("/add_crystal", methods=["GET", "POST"])
 def add_crystal():
+    if request.method == "POST":
+        is_waterproof = "yes" if request.form.get("is_waterproof") else "no"
+        is_sunproof = "yes" if request.form.get("is_sunproof") else "no"
+        crystal = {
+            "crystal_name": request.form.get("crystal_name"),
+            "color": request.form.get("color"),
+            "usage": request.form.get("usage"),
+            "is_waterproof": is_waterproof,
+            "is_sunproof": is_sunproof,
+            "quantity": request.form.get("quantity")
+        }
+        mongo.db.crystals.insert_one(crystal)
+        flash("You Just Added A Crystal!")
+        return redirect(url_for("add_crystal"))
+
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     return render_template("pages/add_crystal.html", chakras=chakras)
 
