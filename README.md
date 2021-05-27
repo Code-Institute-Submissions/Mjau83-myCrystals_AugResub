@@ -414,6 +414,19 @@ I still got a "/" to much.
 
 Text
 
+**name bug**
+* **Bug**
+
+Text
+
+* **Fix**
+
+Text
+
+* **Verdict**
+
+Text
+
 [Back to top](#table-of-content)
 
 

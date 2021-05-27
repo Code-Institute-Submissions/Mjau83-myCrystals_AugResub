@@ -112,6 +112,7 @@ def add_crystal():
             "usage": request.form.get("usage"),
             "is_waterproof": is_waterproof,
             "is_sunproof": is_sunproof,
+            "name_of_chakra": request.form.get("name_of_chakra"),
             "quantity": request.form.get("quantity")
         }
         mongo.db.crystals.insert_one(crystal)
