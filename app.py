@@ -112,7 +112,7 @@ def add_crystal():
             "usage": request.form.get("usage"),
             "is_waterproof": is_waterproof,
             "is_sunproof": is_sunproof,
-            "name_of_chakra": request.form.get("name_of_chakra"),
+            "name_of_chakra": request.form.getlist("name_of_chakra"),
             "quantity": request.form.get("quantity")
         }
         mongo.db.crystals.insert_one(crystal)
@@ -120,14 +120,15 @@ def add_crystal():
         return redirect(url_for("view_crystals"))
 
     chakras = mongo.db.chakras.find().sort("chakras", 1)
-    return render_template("pages/add_crystal.html", chakras=chakras)
+    return render_template("pages/add_crystal.html", chakras=chakras )
 
 
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
     crystal = mongo.db.crystal_name.find_one({"_id": ObjectId(crystal_id)})
     chakras = mongo.db.chakras.find().sort("chakras", 1)
-    return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras)
+    return render_template("pages/edit_crystal.html", crystal=crystal,
+        chakras=chakras)
 
 
 if __name__ == "__main__":

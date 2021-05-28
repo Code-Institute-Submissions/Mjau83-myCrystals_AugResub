@@ -6,68 +6,7 @@
             <div class="opaque-overlay">
                 <h3 class="center-align">Edit Crystal</h3>
                 <div class="row">
-                    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_crystal', crystal_id=crystal._id)}}">
-                        <div class="card-panel">
-                            <!-- crystal name -->
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="crystal_name" name="crystal_name" minlength="3" maxlength="25" type="text" class="validate"
-                                        required>
-                                    <label for="crystal_name">Name</label>
-                                </div>
-                            </div>
-                            <!-- color -->
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="color" name="color" minlength="3" maxlength="25" type="text" class="validate" required>
-                                    <label for="color">Color</label>
-                                </div>
-                            </div>
-                            <!-- usage --> <!-- Change usage to properties -->
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="usage" name="usage" minlength="5" maxlength="250" class="materialize-textarea"
-                                        required></textarea>
-                                    <label for="usage">Usage</label>
-                                </div>
-                            </div>
-                            <!-- waterproof --> 
-                            <div class="row">
-                                <label for="is_waterproof">
-                                    <i class="fas fa-tint" id="drop-add"></i>
-                                    <input id="is_waterproof" type="checkbox" class="filled-in" checked="checked" />
-                                    <span>Waterproof</span>
-                                </label>
-                            </div>
-                            <!-- sunproof --> 
-                            <div class="row">
-                                <label for="is_sunproof">
-                                    <i class="fas fa-sun" id="sun-add"></i>
-                                    <input id="is_sunproof" type="checkbox" class="filled-in" checked="checked" />
-                                    <span>Sunproof</span>
-                                </label>
-                            </div>
-                            <!-- dropdown for chakras -->
-                            <div class="row">
-                                {% include "components/chakras.html" %}
-                            </div>
-                            <!-- quantity --> 
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="quantity" name="quantity" minlength="1" maxlength="3" type="text" class="validate" required>
-                                    <label for="quantity">Quantity</label>
-                                </div>
-                            </div>
-                            <!-- edit crystal button -->
-                            <div class="row">
-                                <div class="col s4 center-align">
-                                    <button type="submit" class="btn">
-                                        Edit Crystal
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    {% include "components/forms/edit_crystal_form.html" %}
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_crystal') }}">
+<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_crystal', crystal_id=crystal._id, )}}">
     <div class="card-panel">
         <!-- crystal name -->
         <div class="row">
@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col s4 center-align">
                 <button type="submit" class="btn">
-                    Add Crystal <i class="far fa-gem"></i>
+                    Edit Crystal 
                 </button>
             </div>
         </div>
