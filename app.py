@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    return render_template('pages/index.html')
+    return render_template("pages/index.html")
 
 
 @app.route("/crystals")
@@ -117,10 +117,17 @@ def add_crystal():
         }
         mongo.db.crystals.insert_one(crystal)
         flash("You Just Added A Crystal!")
-        return redirect(url_for("add_crystal"))
+        return redirect(url_for("view_crystals"))
 
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     return render_template("pages/add_crystal.html", chakras=chakras)
+
+
+@app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
+def edit_crystal(crystal_id):
+    crystal = mongo.bd.crystal_name.find_one({"_id": ObjectId(crystal_id)})
+    chakras = mongo.db.chakras.find().sort("chakras", 1)
+    return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras)
 
 
 if __name__ == "__main__":
