@@ -125,7 +125,7 @@ def add_crystal():
 
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
-    crystal = mongo.bd.crystal_name.find_one({"_id": ObjectId(crystal_id)})
+    crystal = mongo.db.crystal_name.find_one({"_id": ObjectId(crystal_id)})
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras)
 
