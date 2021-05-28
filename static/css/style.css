@@ -120,7 +120,7 @@ form i {
 
 /* ------ Accordion */
 .expandable {
-    margin: 6px 9px;
+    margin: 6px 10px;
 }
 
 .collapsible-header {
@@ -129,6 +129,8 @@ form i {
     padding: 8px 5px;
     border-bottom: none;
     margin-bottom: 10px;
+    border-radius: 8px;
+}
 }
 .collapsible {
     border-top: none;
