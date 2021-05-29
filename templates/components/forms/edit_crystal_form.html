@@ -5,23 +5,25 @@
             <div class="input-field col s12">
                 <input id="crystal_name" name="crystal_name" minlength="3" maxlength="25" type="text" 
                     value="{{ crystal.crystal_name }}" class="validate" required>
+                    <!-- added input won't show in form-->
                 <label for="crystal_name">Name</label>
             </div>
         </div>
         <!-- color -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="color" name="color" minlength="3" maxlength="25" type="text" class="validate" required>
+                <input id="color" name="color" minlength="3" maxlength="25" type="text" 
+                    value="{{ crystal.color }}"class="validate" required>
                 <label for="color">Color</label>
             </div>
         </div>
         <!-- usage -->
-        <!-- Change usage to properties -->
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="usage" name="usage" minlength="5" maxlength="250" class="materialize-textarea" required>
-                    {{ crystal.usage }}
+                    {{- crystal.usage -}}
                 </textarea>
+                <!-- added input won't show in form-->
                 <label for="usage">Usage</label>
             </div>
         </div>
@@ -64,7 +66,8 @@
         <!-- quantity -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="quantity" name="quantity" minlength="1" maxlength="3" type="text" class="validate" required>
+                <input id="quantity" name="quantity" minlength="1" maxlength="3" type="text" 
+                    value="{{ crystal.quantity }}" class="validate" required>
                 <label for="quantity">Quantity</label>
             </div>
         </div>

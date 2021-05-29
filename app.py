@@ -125,6 +125,21 @@ def add_crystal():
 
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
+    if request.method == "POST":
+        is_waterproof = "yes" if request.form.get("is_waterproof") else "no"
+        is_sunproof = "yes" if request.form.get("is_sunproof") else "no"
+        submit = {
+            "crystal_name": request.form.get("crystal_name"),
+            "color": request.form.get("color"),
+            "usage": request.form.get("usage"),
+            "is_waterproof": is_waterproof,
+            "is_sunproof": is_sunproof,
+            "name_of_chakra": request.form.get("name_of_chakra"),
+            "quantity": request.form.get("quantity")
+        }
+        mongo.db.crystals.update({"_id": ObjectId(crystal_id)}, submit)
+        flash("Your Crystal Is Updated!")
+
     crystal = mongo.db.crystal_name.find_one({"_id": ObjectId(crystal_id)})
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     return render_template("pages/edit_crystal.html", crystal=crystal,
