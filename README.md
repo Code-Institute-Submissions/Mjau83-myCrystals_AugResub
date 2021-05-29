@@ -414,6 +414,34 @@ I still got a "/" to much.
 
 Text
 
+**Add crystal bug**
+* **Bug**
+
+After creating the edit_crystal_form.html and creating the functionallity 
+for it in app.py the Add Crystal link in the navbar stopped working, and it displayed
+an "undefined" error saying *'crystal' is not defined*. I had a hard time figureing out
+exactely what it meant, and how to read the traceback. So after trying to search on google
+without getting any smarter I turned to Tutor Support. 
+
+The code snippet that seem to be causing the error was *return render_template("pages/
+add_crystal.html", chakras=chakras)* in on line 123 in app.py. So I tried adding *crystal=
+crystal* to it since crystal wasn't defined. It didn't help. I also tried creating a variable
+above the *chakra* variable on line 122, and move *mongo.db.crystals.insert_one(crystal)* to it.
+But with no success. After talking with Jo on Tutor Support it seemed like the error wasn't really
+in app.py, but in *chakras.html* which was included in both *edit_crystal_form.html* and 
+*add_crystal_form.html*. So instaed of using {% include "components/chakras.html" %} in *add_
+crystal_form.html* I pasted the code from chakras.html, and removed the if statement. Now the 
+Add Crystal link finally worked!
+
+* **Fix**
+
+The Add Crystal form shows up when clicking the link in the navbar and adds a new crystal 
+to the db.
+
+* **Verdict**
+
+Text
+
 **name bug**
 * **Bug**
 

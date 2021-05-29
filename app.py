@@ -115,7 +115,7 @@ def add_crystal():
             "name_of_chakra": request.form.get("name_of_chakra"),
             "quantity": request.form.get("quantity")
         }
-        mongo.db.crystals.insert_one(crystal) 
+        mongo.db.crystals.insert_one(crystal)
         flash("You Just Added A Crystal!")
         return redirect(url_for("view_crystals"))
 
