@@ -3,8 +3,8 @@
         <!-- crystal name -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="crystal_name" name="crystal_name" minlength="3" maxlength="25" type="text" class="validate"
-                    required>
+                <input id="crystal_name" name="crystal_name" minlength="3" maxlength="25" type="text" 
+                    value="{{ crystal.crystal_name }}" class="validate" required>
                 <label for="crystal_name">Name</label>
             </div>
         </div>
@@ -19,8 +19,9 @@
         <!-- Change usage to properties -->
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="usage" name="usage" minlength="5" maxlength="250" class="materialize-textarea"
-                    required></textarea>
+                <textarea id="usage" name="usage" minlength="5" maxlength="250" class="materialize-textarea" required>
+                    {{ crystal.usage }}
+                </textarea>
                 <label for="usage">Usage</label>
             </div>
         </div>
@@ -28,7 +29,11 @@
         <div class="row">
             <label for="is_waterproof">
                 <i class="fas fa-tint" id="drop-add"></i>
-                <input id="is_waterproof" type="checkbox" class="filled-in" checked="checked" />
+                {% if crystal.is_waterproof == "yes" %}
+                    <input id="is_waterproof" type="checkbox" class="filled-in" checked="checked" />
+                {% else %}
+                    <input id="is_waterproof" type="checkbox" class="filled-in"/>
+                {% endif %}
                 <span>Waterproof</span>
             </label>
         </div>
@@ -36,7 +41,11 @@
         <div class="row">
             <label for="is_sunproof">
                 <i class="fas fa-sun" id="sun-add"></i>
-                <input id="is_sunproof" type="checkbox" class="filled-in" checked="checked" />
+                {% if crystal.is_sunproof == "yes" %}
+                    <input id="is_sunproof" type="checkbox" class="filled-in" checked="checked" />
+                {% else %}
+                    <input id="is_sunproof" type="checkbox" class="filled-in"/>
+                {% endif %}
                 <span>Sunproof</span>
             </label>
         </div>
@@ -44,7 +53,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <select id="name_of_chakra" name="name_of_chakra" class="validate">
-                    <option value="" disabled selected>Pick a Chakra</option>
+                    <option value="" disabled>Pick a Chakra</option>
                     {% for chakra in chakras %}
                         <option value="{{ chakra.name_of_chakra }}" selected>{{ chakra.name_of_chakra }}</option>
                     {% endfor %}
@@ -65,6 +74,7 @@
                 <button type="submit" class="btn">
                     Edit Crystal 
                 </button>
+                <a href="{{ url_for('view_crystals') }}" class="btn">Cancel</a>
             </div>
         </div>
     </div>
