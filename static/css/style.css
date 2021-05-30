@@ -57,6 +57,11 @@ h3 {
     border-radius: 8px;
 }
 
+.search-bar {
+    padding: 5px;
+    margin: 0px 10px;
+}
+
 form i {
     color: #69677D;
 }
