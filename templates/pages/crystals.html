@@ -6,6 +6,10 @@
         <div class="opaque-overlay">
             <!-- username won't show properly -->
             {% include "components/profile.html" %}
+            <!-- Search fieald -->
+            <div class="row card-panel grey lighten-5">
+                {% include "components/forms/search_form.html" %}
+            </div>
             <div class="row">
                 <div class="col s12 m8 offset-m2">
                     <ul class="collapsible expandable">
@@ -17,6 +21,7 @@
                                     {{ crystal.crystal_name }}
                                 </h6>
                                 {% if crystal.is_waterproof == "yes" %}
+                                <!-- Icon to specify if the crystal is waterproof and/or sunproof -->
                                 <i class="fas fa-tint tooltipped" id="drop-added" data-position="right"
                                     data-tooltip="Waterproof Crystal"></i>
                                 {% endif %}
@@ -25,6 +30,7 @@
                                     data-tooltip="Sunproof Crystal"></i>
                                 {% endif %}
                             </div>
+                            <!-- Shows all info about the crystal -->
                             <div class="collapsible-body">
                                 <h6>Color: </h6>
                                 <p>{{ crystal.color }}</p>

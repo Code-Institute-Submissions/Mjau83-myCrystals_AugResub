@@ -29,6 +29,13 @@ def view_crystals():
     return render_template("pages/crystals.html", crystals=crystals)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
+    return render_template("pages/crystals.html", crystals=crystals)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -143,7 +150,7 @@ def edit_crystal(crystal_id):
 
     crystal = mongo.db.crystals.find_one({"_id": ObjectId(crystal_id)})
     chakras = mongo.db.crystals.find().sort("chakras", 1)
-    return render_template("pages/view_crystals.html", crystal=crystal, chakras=chakras)
+    return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras)
 
 
 @app.route("/delete_crystal/<crystal_id>")
