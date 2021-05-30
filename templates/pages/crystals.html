@@ -37,7 +37,7 @@
                                 <div class="row">
                                     <div class="col s4 center-align">
                                         <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}" class="btn">Edit</a>
-                                        <a href="" class="btn">Delete</a>
+                                        <a href="{{ url_for('delete_crystal', crystal_id=crystal._id)}}" class="btn">Delete</a>
                                     </div>
                                 </div>
                             </div>
