@@ -1,71 +1,45 @@
 <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_crystal') }}">
     <div class="card-panel">
+        <!-- date -->
+        <div>
+            <label for="date_used"></label>
+            <input id="date_used" name="date_used" type="text" class="datepicker">
+        </div>
+        <!-- dropdown for methods -->
+        <div class="row">
+            <div class="input-field col s12">
+                <select id="name_of_method" name="name_of_method" class="validate">
+                    <option value="" disabled selected>Method Used</option>
+                    {% for method in methods %}
+                        <option value="{{ .name_of_method }}">{{ .name_of_method }}</option>
+                    {% endfor %}
+                </select>
+                <label for="name_of_method">Method</label>
+            </div>
+        </div>
         <!-- crystal name -->
         <div class="row">
             <div class="input-field col s12">
                 <input id="crystal_name" name="crystal_name" minlength="3" maxlength="25" type="text" class="validate"
                     required>
-                <label for="crystal_name">Name</label>
+                <label for="crystal_name">Crystal</label>
             </div>
         </div>
-        <!-- color -->
+        <!-- notes -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="color" name="color" minlength="3" maxlength="25" type="text" class="validate" required>
-                <label for="color">Color</label>
-            </div>
-        </div>
-        <!-- usage -->
-        <!-- Change usage to properties -->
-        <div class="row">
-            <div class="input-field col s12">
-                <textarea id="usage" name="usage" minlength="5" maxlength="250" class="materialize-textarea"
+                <textarea id="notes" name="notes" minlength="5" maxlength="250" class="materialize-textarea"
                     required></textarea>
-                <label for="usage">Usage</label>
+                <label for="notes">Notes</label>
             </div>
         </div>
-        <!-- waterproof -->
-        <div class="row">
-            <label for="is_waterproof">
-                <i class="fas fa-tint" id="drop-add"></i>
-                <input id="is_waterproof" type="checkbox" class="filled-in" checked="checked" />
-                <span>Waterproof</span>
-            </label>
-        </div>
-        <!-- sunproof -->
-        <div class="row">
-            <label for="is_sunproof">
-                <i class="fas fa-sun" id="sun-add"></i>
-                <input id="is_sunproof" type="checkbox" class="filled-in" checked="checked" />
-                <span>Sunproof</span>
-            </label>
-        </div>
-        <!-- dropdown for chakras -->
-        <div class="row">
-            <div class="input-field col s12">
-                <select id="name_of_chakra" name="name_of_chakra" class="validate">
-                    <option value="" disabled selected>Pick a Chakra</option>
-                    {% for chakra in chakras %}
-                        <option value="{{ chakra.name_of_chakra }}">{{ chakra.name_of_chakra }}</option>
-                    {% endfor %}
-                </select>
-                <label for="name_of_chakra">Chakra</label>
-            </div>
-        </div>
-        <!-- quantity -->
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="quantity" name="quantity" minlength="1" maxlength="3" type="text" class="validate" required>
-                <label for="quantity">Quantity</label>
-            </div>
-        </div>
-        <!-- add crystal button -->
+        <!-- add entry button -->
         <div class="row">
             <div class="col s4 center-align">
                 <button type="submit" class="btn">
-                    Add Crystal <i class="far fa-gem"></i>
+                    Add Entry <i class="far fa-gem"></i>
                 </button>
-                <a href="{{ url_for('view_crystals') }}" class="btn">Cancel</a>
+                <a href="{{ }}" class="btn">Cancel</a>
             </div>
 
         </div>
