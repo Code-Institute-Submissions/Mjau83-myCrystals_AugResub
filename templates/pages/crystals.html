@@ -4,12 +4,15 @@
 <div class="container">
     <div id="add-crystal-bg">
         <div class="opaque-overlay">
+
             <!-- username won't show properly -->
             {% include "components/profile.html" %}
-            <!-- Search fieald -->
+
+            <!-- Search field -->
             <div class="row card-panel search-bar">
                 {% include "components/forms/search_form.html" %}
             </div>
+
             <div class="row">
                 <div class="col s12 m8 offset-m2">
                     {% if crystals|length > 0 %}

@@ -60,6 +60,7 @@ h3 {
 .search-bar {
     padding: 5px;
     margin: 0px 10px;
+    border-radius: 20px;
 }
 
 form i {
