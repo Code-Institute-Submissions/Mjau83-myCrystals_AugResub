@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+import logging
 if os.path.exists("env.py"):
     import env
 
@@ -16,7 +17,6 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
-
 
 @app.route("/")
 def index():
@@ -35,7 +35,7 @@ def search():
     crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
     return render_template("pages/crystals.html", crystals=crystals)
 
-
+# Register page 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -58,7 +58,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("pages/register.html")
 
-
+# Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -107,7 +107,7 @@ def logout():
     session.clear()
     return redirect(url_for("login"))
 
-
+# Add a new crystal to db
 @app.route("/add_crystal", methods=["GET", "POST"])
 def add_crystal():
     if request.method == "POST":
@@ -129,7 +129,7 @@ def add_crystal():
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     return render_template("pages/add_crystal.html", chakras=chakras)
 
-
+# Edit crystal
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
  
@@ -152,11 +152,17 @@ def edit_crystal(crystal_id):
     chakras = mongo.db.crystals.find().sort("chakras", 1)
     return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras)
 
-
+# Delete crystal
 @app.route("/delete_crystal/<crystal_id>")
 def delete_crystal(crystal_id):
     mongo.db.crystals.remove({"_id": ObjectId(crystal_id)})
     flash("Your Crystal Is Deleted!")
+
+
+@app.route("/journal")
+def view_entries():
+    logs = mongo.db.crystal_log()
+    return render_template("pages/journal.html", logs=logs)
 
 
 if __name__ == "__main__":

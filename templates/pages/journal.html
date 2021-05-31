@@ -4,41 +4,21 @@
 <div class="container">
     <div id="add-crystal-bg">
         <div class="opaque-overlay">
-            <!-- Button to add a journal enatry-->
+            <!-- Button to add a journal entry-->
             <div>
-                <a href="{{}}" class="btn">Write A Journal Entry</a>
+                <a href="#" class="btn">Write A Journal Entry</a>
             </div>
+            <!-- All journal entries -->
             <div class="row">
                 <div class="col s12 m8 offset-m2">
-                    {% if entries|length > 0 %}
-                    <ul class="collapsible expandable">
-                        {% for entry in entries %}
-                        <li>
-                            <div class="collapsible-header">
-                                <i class="far fa-gem"></i>
-                                <h5 id="journal-date">
-                                    {{ .date_used }}
-                                </h5>
-                                <h6 id="crystal-method">
-                                    {{ .name_of_method }}
-                                </h6>
-                            </div>
-                            <!-- Shows entire journal entry-->
-                            <div class="collapsible-body">
-                                <h6>Crystal: </h6>
-                                <p>{{ .crystal_name }}</p>
-                                <h6>Notes: </h6>
-                                <p>{{ .notes }}</p>
-                                <div class="row">
-                                    <div class="col s4 center-align">
-                                        <a href="{{ }}" class="btn">Edit</a>
-                                        <a href="{{ }}" class="btn">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    
+                    {% for logs in crystal_log %}
+                        {{ log.date_used }}<br>
+                        {{ log.name_of_method }}<br>
+                        {{ log.crystal_name }}<br>
+                        {{ log.notes }}
+                    {% endfor %}
+                    
                 </div>
             </div>
         </div>
