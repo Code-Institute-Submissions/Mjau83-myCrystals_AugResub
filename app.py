@@ -74,7 +74,7 @@ def login():
                     flash("Welcome {}".format(
                         request.form.get("username")))
                     return redirect(url_for(
-                        "profile", username=session["user"]))
+                        "view_crystals", username=session["user"]))
             else:
                 # invalid password
                 flash("The Username and/or Password is incorrect. Please try again")
@@ -120,14 +120,19 @@ def add_crystal():
             "is_waterproof": is_waterproof,
             "is_sunproof": is_sunproof,
             "name_of_chakra": request.form.get("name_of_chakra"),
-            "quantity": request.form.get("quantity")
+            "quantity": request.form.get("quantity"),
+            "date_used": request.form.get("date_used"),
+            "name_of_method": request.form.get("name_of_method"),
+            "notes": request.form.get("notes")
         }
         mongo.db.crystals.insert_one(crystal)
         flash("You Just Added A Crystal!")
         return redirect(url_for("view_crystals"))
 
     chakras = mongo.db.chakras.find().sort("chakras", 1)
-    return render_template("pages/add_crystal.html", chakras=chakras)
+    usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
+    return render_template("pages/add_crystal.html", chakras=chakras, 
+        usage_method=usage_method)
 
 # Edit crystal
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
@@ -143,14 +148,19 @@ def edit_crystal(crystal_id):
             "is_waterproof": is_waterproof,
             "is_sunproof": is_sunproof,
             "name_of_chakra": request.form.get("name_of_chakra"),
-            "quantity": request.form.get("quantity")
+            "quantity": request.form.get("quantity"),
+            "date_used": request.form.get("date_used"),
+            "name_of_method": request.form.get("name_of_method"),
+            "notes": request.form.get("notes")
         }
         mongo.db.crystals.update({"_id": ObjectId(crystal_id)}, submit)
         flash("Your Crystal Is Updated!")
 
     crystal = mongo.db.crystals.find_one({"_id": ObjectId(crystal_id)})
     chakras = mongo.db.crystals.find().sort("chakras", 1)
-    return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras)
+    usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
+    return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras, 
+        usage_method=usage_method)
 
 # Delete crystal
 @app.route("/delete_crystal/<crystal_id>")
