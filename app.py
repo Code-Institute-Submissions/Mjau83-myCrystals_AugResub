@@ -71,8 +71,6 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Welcome {}".format(
-                        request.form.get("username")))
                     return redirect(url_for(
                         "view_crystals", username=session["user"]))
             else:
@@ -137,11 +135,10 @@ def add_crystal():
 # Edit crystal
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
- 
     if request.method == "POST":
         is_waterproof = "yes" if request.form.get("is_waterproof") else "no"
         is_sunproof = "yes" if request.form.get("is_sunproof") else "no"
-        submit = {
+        edit = {
             "crystal_name": request.form.get("crystal_name"),
             "color": request.form.get("color"),
             "usage": request.form.get("usage"),
@@ -153,20 +150,21 @@ def edit_crystal(crystal_id):
             "name_of_method": request.form.get("name_of_method"),
             "notes": request.form.get("notes")
         }
-        mongo.db.crystals.update({"_id": ObjectId(crystal_id)}, submit)
+        mongo.db.crystals.update({"_id": ObjectId(crystal_id)}, edit)
         flash("Your Crystal Is Updated!")
 
     crystal = mongo.db.crystals.find_one({"_id": ObjectId(crystal_id)})
     chakras = mongo.db.crystals.find().sort("chakras", 1)
     usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
-    return render_template("pages/edit_crystal.html", crystal=crystal, chakras=chakras, 
-        usage_method=usage_method)
+    return render_template("pages/edit_crystal.html", crystal=crystal, 
+        chakras=chakras, usage_method=usage_method)
 
 # Delete crystal
 @app.route("/delete_crystal/<crystal_id>")
 def delete_crystal(crystal_id):
     mongo.db.crystals.remove({"_id": ObjectId(crystal_id)})
     flash("Your Crystal Is Deleted!")
+    return redirect(url_for("view_crystals"))
 
 
 @app.route("/journal")
