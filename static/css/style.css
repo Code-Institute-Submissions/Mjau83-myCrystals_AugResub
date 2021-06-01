@@ -53,11 +53,14 @@ h3 {
 
 .card-panel {
     color: #69677D;
-    background-color: #EAE0E6;
+    background-color: #EAE0E6
     border-radius: 8px;
 }
 
 .search-bar {
+    color: #69677D;
+    background-color: rgba(234, 224, 230, 0.2);
+    
     padding: 5px;
     margin: 0px 10px;
     border-radius: 20px;

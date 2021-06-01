@@ -4,14 +4,13 @@
 <div class="container">
     <div id="add-crystal-bg">
         <div class="opaque-overlay">
-
-            <!-- username won't show properly -->
-            {% include "components/profile.html" %}
-
+            
             <!-- Search field -->
-            <div class="row card-panel search-bar">
+            <div class="row card search-bar">
                 {% include "components/forms/search_form.html" %}
             </div>
+            <!-- username won't show properly -->
+            {% include "components/profile.html" %}
 
             <div class="row">
                 <div class="col s12 m8 offset-m2">
@@ -38,7 +37,7 @@
                             <div class="collapsible-body">
                                 <h6>Color: </h6>
                                 <p>{{ crystal.color }}</p>
-                                <h6>Usage: </h6>
+                                <h6>Used for: </h6>
                                 <p>{{ crystal.usage }}</p>
                                 <h6>Chakra: </h6>
                                 <p>{{ crystal.name_of_chakra }}</p>
