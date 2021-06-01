@@ -121,7 +121,8 @@ def add_crystal():
             "quantity": request.form.get("quantity"),
             "date_used": request.form.get("date_used"),
             "name_of_method": request.form.get("name_of_method"),
-            "notes": request.form.get("notes")
+            "notes": request.form.get("notes"),
+            "crystal_owner": session["user"]
         }
         mongo.db.crystals.insert_one(crystal)
         flash("You Just Added A Crystal!")
@@ -148,7 +149,8 @@ def edit_crystal(crystal_id):
             "quantity": request.form.get("quantity"),
             "date_used": request.form.get("date_used"),
             "name_of_method": request.form.get("name_of_method"),
-            "notes": request.form.get("notes")
+            "notes": request.form.get("notes"),
+            "crystal_owner": session["user"]
         }
         mongo.db.crystals.update({"_id": ObjectId(crystal_id)}, edit)
         flash("Your Crystal Is Updated!")
