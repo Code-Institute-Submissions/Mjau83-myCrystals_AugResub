@@ -154,7 +154,7 @@ def edit_crystal(crystal_id):
         flash("Your Crystal Is Updated!")
 
     crystal = mongo.db.crystals.find_one({"_id": ObjectId(crystal_id)})
-    chakras = mongo.db.crystals.find().sort("chakras", 1)
+    chakras = mongo.db.chakras.find().sort("chakras", 1)
     usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
     return render_template("pages/edit_crystal.html", crystal=crystal, 
         chakras=chakras, usage_method=usage_method)

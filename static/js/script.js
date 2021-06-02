@@ -1,7 +1,13 @@
 $(document).ready(function(){
+    /* mobile sidenav */
     $('.sidenav').sidenav({edge: "right"});
+    /* tootip for buttons */
     $('.tooltipped').tooltip();
+
     $('select').formSelect();
+    /* modal for deleting a crystal */
+    $('.modal').modal();
+    /* date used */
     $('.datepicker').datepicker({
         format: "dd mmmm, yyyy",
         yearRange: 2,
@@ -11,7 +17,7 @@ $(document).ready(function(){
         }
     });
 });
-
+/* shows crystals with info */
 var elem = document.querySelector('.collapsible.expandable');
 var instance = M.Collapsible.init(elem, {
   accordion: false
