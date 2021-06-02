@@ -178,23 +178,31 @@ The code was tested with:
 
 * Plan
 
-Text
+I want to create a form that the user can use for registration to add a uniqe username. If no other
+user have the same username the user can register a password that the user like.
 
 * Implementation
 
-Text
+I created a for for the user to fill in when they click on "Register". Here the user can choose a username
+and a password. If the username already exsists a flash message will be displayed to the user that the
+"Username already exists", and the user will be redirected to a empty registration form to try again.
+If the username dosn't exist in the db the new user will be inserted to the db and the user gets logged in
+to start add crystals to the userprofile.
 
 * Test
 
-Text
+I tried to add three different users to see that the registration form worked properly. At sometime I tried
+to add a username that already was in the db, and that showed me the flash message telling me to try again.
+
 
 * Result
 
-Text
+The new user is registered to the db only if the username doesn't exsist in the db already, and a new user
+can't register a username that already exsist
 
 * Verdict 
 
-Text
+The registration form works as planned.
 
 **As a user I want to, be able to Login and Logout**
 
