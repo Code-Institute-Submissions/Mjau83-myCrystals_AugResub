@@ -58,7 +58,6 @@
                 <label for="quantity">Quantity</label>
             </div>
         </div>
-
         <!-- date last used -->
         <div>
             <i class="fas fa-calendar-day"></i><label for="date_used">Date: </label>
@@ -85,14 +84,17 @@
         </div>
         <!-- add crystal button -->
         <div class="row">
-            <div class="col s4 center-align">
-                <button type="submit" class="btn">
-                    Add Crystal <i class="far fa-gem"></i>
+            <div class="col s6 center-align">
+                <button type="submit" class="btn tooltipped" id="edit" data-position="right" 
+                    data-tooltip="Add Crystal">
+                    <i class="fas fa-plus"></i><i class="far fa-gem"></i>
                 </button>
                 <!-- cancel button-->
-                <a href="{{ url_for('view_crystals') }}" class="btn">Cancel</a>
+                <a href="{{ url_for('view_crystals') }}" class="btn tooltipped" id="cancel" data-position="right" 
+                    data-tooltip="Cancel">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
             </div>
-
         </div>
     </div>
 </form>

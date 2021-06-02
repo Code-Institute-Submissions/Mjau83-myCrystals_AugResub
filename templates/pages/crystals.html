@@ -53,12 +53,15 @@
                                     <p>{{ crystal.notes }}</p>
                                 </div>
                                 <div class="row">
-                                    <div class="col s4 center-align">
-
-                                        <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}" class="btn"><i
-                                                class="fas fa-pencil-alt"></i></a>
-                                        <a href="{{ url_for('delete_crystal', crystal_id=crystal._id)}}" class="btn"><i
-                                                class="far fa-trash-alt"></i></a>
+                                    <div class="col s6 center-align">
+                                        <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}" class="btn tooltipped" id="edit" data-position="right" 
+                                            data-tooltip="Edit Crystal">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <a href="{{ url_for('delete_crystal', crystal_id=crystal._id)}}" class="btn tooltipped" id="delete" data-position="right" 
+                                            data-tooltip="Delete Crystal">
+                                            <i class="far fa-trash-alt"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
