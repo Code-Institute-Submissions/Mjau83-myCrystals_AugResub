@@ -25,6 +25,9 @@ def index():
 
 @app.route("/crystals")
 def view_crystals():
+    """
+    Shows all added crystals to the user
+    """
     crystals = list(mongo.db.crystals.find())
     return render_template("pages/crystals.html", crystals=crystals)
 
@@ -39,6 +42,11 @@ def search():
 # Register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Lets a new user register to the website
+    Checks if username already exists in db
+    Redirects user to the userprofile
+    """
     if request.method == "POST":
         # does username already exists?
         existing_user = mongo.db.users.find_one(
@@ -55,7 +63,6 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("You are registered and can start to add your crystals!")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("pages/register.html")
 
@@ -63,6 +70,10 @@ def register():
 # Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Lets user to logg in with username and password
+    Redirects user to see all the crystals stored
+    """
     if request.method == "POST":
         # does username already exists?
         existing_user = mongo.db.users.find_one(
@@ -80,7 +91,6 @@ def login():
                 flash(
                     "The Username and/or Password is incorrect. Please try again")
                 return redirect(url_for("login"))
-
         else:
             # username dosen't exist
             flash(
@@ -90,20 +100,27 @@ def login():
     return render_template("pages/login.html")
 
 
-@app.route("/<username>", methods=["GET", "POST"])
-def profile(username):
-    # grab only the user's username from db
-    username = mongo.db.users.find_one(
+@app.route("/crystals", methods=["GET", "POST"])
+def profile():
+    """
+    grab only the user's username from db
+    """
+    username_in_db = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("pages/crystals.html", username=username)
+        print(username_in_db)
+        return render_template("pages/crystals.html", username=username_in_db)
 
     return redirect(url_for("login"))
 
 
 @app.route("/logout")
 def logout():
+    """
+    Lets the user log out and takes them
+    to the Log In page again
+    """
     # log out user and remove cookies
     session.clear()
     return redirect(url_for("login"))
@@ -112,6 +129,9 @@ def logout():
 # Add a new crystal to db
 @app.route("/add_crystal", methods=["GET", "POST"])
 def add_crystal():
+    """
+    Adds a new crystal and information about it to the db
+    """
     if request.method == "POST":
         is_waterproof = "yes" if request.form.get("is_waterproof") else "no"
         is_sunproof = "yes" if request.form.get("is_sunproof") else "no"
