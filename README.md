@@ -183,7 +183,7 @@ user have the same username the user can register a password that the user like.
 
 * Implementation
 
-I created a for for the user to fill in when they click on "Register". Here the user can choose a username
+I created a form for the user to fill in when they click on "Register". Here the user can choose a username
 and a password. If the username already exsists a flash message will be displayed to the user that the
 "Username already exists", and the user will be redirected to a empty registration form to try again.
 If the username dosn't exist in the db the new user will be inserted to the db and the user gets logged in
@@ -208,23 +208,34 @@ The registration form works as planned.
 
 * Plan
 
-Text
+I the user already is registered I want them to be able to log in using the password they choose at
+the point of registration. I also want them to be able to log out from the session when they like to.
 
 * Implementation
 
-Text
+When the user enters the website they can choose to log in if they have registered befor. The form checks to 
+see if the username is in the db, and if it, is it check so that the username matches. If it's a match the
+user gets logged in and can view all the crystals they have added. If the user doesn't exist in the db, or
+if the username doesn't match, and the user will be redirected to a empty log in form to try again. When the
+user wishes to log out they can click on the "Log Out" link in the navbar and that will end the session and 
+take them back to the log in form.
 
 * Test
 
-Text
+I have tried to log in with a password that doesn't match the registered user, and I have tried to log in 
+with a username that doesn't exists in the db. Both shows the flash message telle me "The Username and/or 
+Password is incorrect. Please try again". I have also tried logging out using both the log out link in the
+navbar and the link in the mobile sidenav, and both are redirecting me to the log in form again so that I
+can log in again if I like.
 
 * Result
 
-Text
+A unregistered user can't log in, neither can a registered user that uses the wrong password. Both gets a
+message to try again. When the user want to log out they are redirected to the log in page after logging out.
 
 * Verdict 
 
-Text
+Both log in and log out function works as planned
 
 **As a user I want to, add/create as many crystals as I want to**
 
