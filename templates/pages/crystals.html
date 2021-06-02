@@ -4,19 +4,19 @@
 <div class="container">
     <div id="add-crystal-bg">
         <div class="opaque-overlay">
-            
+
             <!-- Search field -->
             <div class="row card search-bar">
                 {% include "components/forms/search_form.html" %}
             </div>
             <!-- username won't show properly -->
             {% include "components/profile.html" %}
-
             <div class="row">
                 <div class="col s12 m8 offset-m2">
                     {% if crystals|length > 0 %}
                     <ul class="collapsible expandable">
                         {% for crystal in crystals %}
+                        {% if session.user|lower == crystal.crystal_owner|lower %}
                         <li>
                             <div class="collapsible-header">
                                 <i class="far fa-gem"></i>
@@ -35,28 +35,35 @@
                             </div>
                             <!-- Shows all info about the crystal -->
                             <div class="collapsible-body">
-                                <h6>Color: </h6><p>{{ crystal.color }}</p>
-                                <h6>Used for: </h6><p>{{ crystal.usage }}</p>
-                                <h6>Chakra: </h6><p>{{ crystal.name_of_chakra }}</p>
-                                <h6>Quantity: </h6><p>{{ crystal.quantity }}</p>
+                                <h6>Color: </h6>
+                                <p>{{ crystal.color }}</p>
+                                <h6>Used for: </h6>
+                                <p>{{ crystal.usage }}</p>
+                                <h6>Chakra: </h6>
+                                <p>{{ crystal.name_of_chakra }}</p>
+                                <h6>Quantity: </h6>
+                                <p>{{ crystal.quantity }}</p>
                                 <div class="crystal-log">
                                     <h6><i class="fas fa-book"></i> Crystal Journal</h6>
-                                    <h6>Used last time: </h6><p>{{ crystal.date_used }}</p>
-                                    <h6>Method:</h6><p>{{ crystal.name_of_method }}</p>
-                                    <h6>Notes:</h6><p>{{ crystal.notes }}</p>
+                                    <h6>Used last time: </h6>
+                                    <p>{{ crystal.date_used }}</p>
+                                    <h6>Method:</h6>
+                                    <p>{{ crystal.name_of_method }}</p>
+                                    <h6>Notes:</h6>
+                                    <p>{{ crystal.notes }}</p>
                                 </div>
                                 <div class="row">
                                     <div class="col s4 center-align">
-                                        {% if session.user|lower == crystal.crystal_owner|lower %}
-                                        <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}"
-                                            class="btn"><i class="fas fa-pencil-alt"></i></a>
-                                        <a href="{{ url_for('delete_crystal', crystal_id=crystal._id)}}"
-                                            class="btn"><i class="far fa-trash-alt"></i></a>
-                                        {% endif %}
+
+                                        <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}" class="btn"><i
+                                                class="fas fa-pencil-alt"></i></a>
+                                        <a href="{{ url_for('delete_crystal', crystal_id=crystal._id)}}" class="btn"><i
+                                                class="far fa-trash-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </li>
+                        {% endif %}
                         {% endfor %}
                     </ul>
                     {% else %}

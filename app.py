@@ -101,7 +101,6 @@ def profile(username):
 @app.route("/logout")
 def logout():
     # log out user and remove cookies
-    flash("You are logged out")
     session.clear()
     return redirect(url_for("login"))
 
@@ -126,7 +125,6 @@ def add_crystal():
         }
         mongo.db.crystals.insert_one(crystal)
         flash("You Just Added A Crystal!")
-        return redirect(url_for("view_crystals"))
 
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
