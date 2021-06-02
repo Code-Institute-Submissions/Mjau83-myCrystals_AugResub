@@ -31,9 +31,9 @@
             <label for="is_waterproof">
                 <i class="fas fa-tint" id="drop-add"></i>
                 {% if crystal.is_waterproof == "yes" %}
-                    <input id="is_waterproof" type="checkbox" class="filled-in" checked="checked" />
+                    <input id="is_waterproof" type="checkbox" name="is_waterproof" class="filled-in" checked="checked" />
                 {% else %}
-                    <input id="is_waterproof" type="checkbox" class="filled-in"/>
+                    <input id="is_waterproof" type="checkbox" name="is_waterproof" class="filled-in"/>
                 {% endif %}
                 <span>Waterproof</span>
             </label>
@@ -43,9 +43,9 @@
             <label for="is_sunproof">
                 <i class="fas fa-sun" id="sun-add"></i>
                 {% if crystal.is_sunproof == "yes" %}
-                    <input id="is_sunproof" type="checkbox" class="filled-in" checked="checked" />
+                    <input id="is_sunproof" type="checkbox" name="is_sunproof" class="filled-in" checked="checked" />
                 {% else %}
-                    <input id="is_sunproof" type="checkbox" class="filled-in"/>
+                    <input id="is_sunproof" type="checkbox" name="is_sunproof" class="filled-in"/>
                 {% endif %}
                 <span>Sunproof</span>
             </label>
