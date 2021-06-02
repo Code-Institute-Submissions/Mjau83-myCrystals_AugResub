@@ -241,23 +241,38 @@ Both log in and log out function works as planned
 
 * Plan
 
-Text
+I wanted to create a form for the user so they can add their crystals and store information about them.
+The form should hold information about such things as name, color, usage proper and chakras. But I also
+wanted the user to be able keep a little bit of track of how and when they use their crystals, if they liked. 
 
 * Implementation
 
-Text
+I created a form for the user to add crystals to their userprofile. In the for they can add name, color,
+usage, mark if the crystal is waterproof and/or sunproof, choose the chakras represented by that
+crystal, add number of crystals they own, pick a date when it was last used, choose what it was
+used for and add a note. When the user clicks on the "Add Crystal" button a flash message will tell
+the user "You Just Added A Crystal!", and the new crystal will be inserted to the db. If the user 
+don't want to add a crystal at that time theycan click on the "Cancel" button and go back to where 
+all the crystals are viewed. 
 
 * Test
 
-Text
+I clicked on the Add Crystal link in the navbar/sidenav and it takes me to the Add Crystal form to
+start adding all my informtion. I can pick from the options in the chakras and methods dropdown menus
+and I can also use the date picker to choose a specific date. When I click "Add Crystal" the flash message
+is shown at the top telling that the crystal been added, and when I click "Cancel" I come back to the
+userprofile to the that the new crystal been added with all the information in the accordion. I can
+also see if I marked a crystal as waterproof/sunproof in the header of the accordion since a icon
+is displayed for the one thats been marked.
 
 * Result
 
-Text
+Crystals are added to the db with all the information and is also shown to the user so they can get
+a good overlook of all the crystals, and also access the information about each stone easily.
 
 * Verdict 
 
-Text
+The Add Crystal form works as planned 
 
 **As a user I want to, add information about each crystal**
 
