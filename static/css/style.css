@@ -38,9 +38,11 @@ h3 {
 /* ------ Cards and Forms */
 .card {
     color: #69677D;
-    background-color: #ECB9AC;
+    background-color: rgba(234, 224, 230, 0.2);
     border-radius: 8px;
     pointer-events: auto;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 
 .card a {
