@@ -5,7 +5,6 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-import logging
 if os.path.exists("env.py"):
     import env
 
@@ -17,6 +16,7 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
 
 @app.route("/")
 def index():
@@ -35,7 +35,8 @@ def search():
     crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
     return render_template("pages/crystals.html", crystals=crystals)
 
-# Register page 
+
+# Register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -58,6 +59,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("pages/register.html")
 
+
 # Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -75,12 +77,14 @@ def login():
                         "view_crystals", username=session["user"]))
             else:
                 # invalid password
-                flash("The Username and/or Password is incorrect. Please try again")
+                flash(
+                    "The Username and/or Password is incorrect. Please try again")
                 return redirect(url_for("login"))
 
         else:
             # username dosen't exist
-            flash("The Username and/or Password is incorrect. Please try again")
+            flash(
+                "The Username and/or Password is incorrect. Please try again")
             return redirect(url_for("login"))
 
     return render_template("pages/login.html")
@@ -103,6 +107,7 @@ def logout():
     # log out user and remove cookies
     session.clear()
     return redirect(url_for("login"))
+
 
 # Add a new crystal to db
 @app.route("/add_crystal", methods=["GET", "POST"])
@@ -131,6 +136,7 @@ def add_crystal():
     return render_template("pages/add_crystal.html", chakras=chakras, 
         usage_method=usage_method)
 
+
 # Edit crystal
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
@@ -158,6 +164,7 @@ def edit_crystal(crystal_id):
     usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
     return render_template("pages/edit_crystal.html", crystal=crystal, 
         chakras=chakras, usage_method=usage_method)
+
 
 # Delete crystal
 @app.route("/delete_crystal/<crystal_id>")

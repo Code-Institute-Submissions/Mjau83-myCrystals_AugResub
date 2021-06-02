@@ -7,8 +7,7 @@ $(document).ready(function(){
     $('select').formSelect();
 
     /* modal for deleting a crystal */
-    $('.modal').modal();
-    $('.modal-trigger').leanModal();
+    $('.modal, .modal-trigger').modal();
 
     /* date used */
     $('.datepicker').datepicker({
