@@ -3,10 +3,13 @@ $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
     /* tootip for buttons */
     $('.tooltipped').tooltip();
-
+    /* dropdown in form */
     $('select').formSelect();
+
     /* modal for deleting a crystal */
     $('.modal').modal();
+    $('.modal-trigger').leanModal();
+
     /* date used */
     $('.datepicker').datepicker({
         format: "dd mmmm, yyyy",

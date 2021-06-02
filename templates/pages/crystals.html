@@ -1,6 +1,6 @@
 {% extends "layout/base.html" %}
 {% block content %}
-{% include "components/navigation.html" %}
+{% include "components/navigation/user_navigation.html" %}
 <div class="container">
     <div id="add-crystal-bg">
         <div class="opaque-overlay">
@@ -52,13 +52,13 @@
                                     <p>{{ crystal.notes }}</p>
                                 </div>
                                 <div class="row">
-                                    <div class="col s6 center-align">
+                                    <div class="col s6 md3 center-align offset-m2">
                                         <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}" class="btn tooltipped" id="edit" 
                                             data-position="right" data-tooltip="Edit Crystal">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
-                                        <a href="#delete-crystal" class="btn modal-trigger tooltipped" id="delete" 
-                                            data-position="right" data-tooltip="Delete Crystal">
+                                        <a href="#delete-crystal" class="btn modal-trigger tooltipped" 
+                                            id="delete" data-position="right" data-tooltip="Delete Crystal">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
                                         {% include "components/delete_modal.html" %}

@@ -423,6 +423,7 @@ an "undefined" error saying *'crystal' is not defined*. I had a hard time figure
 exactely what it meant, and how to read the traceback. So after trying to search on google
 without getting any smarter I turned to Tutor Support. 
 
+* **Fix**
 The code snippet that seem to be causing the error was *return render_template("pages/
 add_crystal.html", chakras=chakras)* in on line 123 in app.py. So I tried adding *crystal=
 crystal* to it since crystal wasn't defined. It didn't help. I also tried creating a variable
@@ -433,10 +434,27 @@ in app.py, but in *chakras.html* which was included in both *edit_crystal_form.h
 crystal_form.html* I pasted the code from chakras.html, and removed the if statement. Now the 
 Add Crystal link finally worked!
 
-* **Fix**
+* **Verdict**
 
 The Add Crystal form shows up when clicking the link in the navbar and adds a new crystal 
 to the db.
+
+
+**Modal bug**
+* **Bug**
+
+Modal won't show when the Delete button is clicked in crystals.html
+
+* **Fix**
+
+I tried some solutions that I could find on Stackoverflow; like changing *href* to *onclick*
+and use *$('#delete-crystal').modal('open');* and also adding *$('#delete-crystal').modal();*
+to the js file. I also tried using *$('.trigger-modal').modal();* and removing the modal class.
+
+
+* **Verdict**
+
+Text
 
 * **Verdict**
 
