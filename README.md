@@ -134,16 +134,16 @@ Add tables here
 ### Frameworks and Libraries 
 * [Google Fonts](https://fonts.google.com/) was used to import the fonts mentioned above 
 in the project
-??* [Coolors](https://coolors.co/) was used to decide on th colors and to create the color 
+* [Coolors](https://coolors.co/) was used to decide on th colors and to create the color 
 palette
 * [Am I Responsive](http://ami.responsivedesign.is/) was used to make the mockup
-??* [Boostrap](https://getbootstrap.com/) was used to make the site responsive
+* [Materialize](https://materializecss.com/) was used to make the site responsive and for adding components
 
 ### Tools
 * [Balsamic](https://balsamiq.com) was used to create wireframes in the beginning of 
 the project
 * [WebAIM](https://webaim.org/resources/contrastchecker/) was used to check that the contrast is ok
-??* [Gimp](https://www.gimp.org/) was used to edit photos.
+* [Gimp](https://www.gimp.org/) was used to edit photos.
 * [Favicon.cc](https://www.favicon.cc/) was used to create the fave icon
 * [Webformatter](https://webformatter.com/html) was used to beautify the code
 ??* [Copressor.io](https://compressor.io/) was used to compress the background image
@@ -156,7 +156,7 @@ pushed from Gitpod. Github was also use to deploy the site
 
 ## Testing
 
-?? The was tested for Android on Samsung A50 and Xperia 10. It was also tested on laptop
+The was tested for Android on Samsung A50 and Xperia 10. It was also tested on laptop
 and desktop view (PC).
 
 The code was tested with:
@@ -168,10 +168,10 @@ The code was tested with:
 
 * Test 1
 
-![Lighthouse test 1](assets/images/lighthouse-test1.png)
+![Lighthouse test 1](static/images/lighthouse1.png)
 * Test 2
 
-![Lighthouse test 1](assets/images/lighthouse-test2.png)
+![Lighthouse test 1](static/images/lighthouse2.png)
 
 
 ## User Stories
@@ -507,29 +507,17 @@ Modal won't show when the Delete button is clicked in crystals.html
 
 I tried some solutions that I could find on Stackoverflow; like changing *href* to *onclick*
 and use *$('#delete-crystal').modal('open');* and also adding *$('#delete-crystal').modal();*
-to the js file. I also tried using *$('.trigger-modal').modal();* and removing the modal class.
+to the js file. I also tried using *$('.trigger-modal').modal();* and removing the modal class after 
+talking to another student on Slack who had similar problem. Non of this worked. It was after talking
+my mentor who explained to me that since the delete href is in a jinja for loop it won't work. 
+The solution was to add *loop.index* to the href id, and also adding it to the id in the modal. I also
+needed to add *.modal-trigger* to the js code for the modal. This tricky little thing solved the problem.
 
 
 * **Verdict**
 
-Text
-
-* **Verdict**
-
-Text
-
-**name bug**
-* **Bug**
-
-Text
-
-* **Fix**
-
-Text
-
-* **Verdict**
-
-Text
+The modal popps up when the user clicks on the "Delete" button to ask the user if they are sure
+that they want to delete a crystal.
 
 [Back to top](#table-of-content)
 
