@@ -514,7 +514,7 @@ I finaly got it to work.
 Everything on the index.html page is now clickable and working as it should. 
 
 
-# **Username bug**
+**Username bug**
 * **Bug**
 
 The username won't show at the top of the crystals.html
@@ -525,11 +525,16 @@ Instead of just using {{ username }} in profile.html I changed it to url_for('pr
 username=session['user']). This shows */profile/username* at the top. I tried to figure out
 where this was comming from, and removed "/profile" from @app.route in app.py ending up with
 *@app.route ("/< username >"*. Now the profile.html shows *Hello /username* at the top, but
-I still got a "/" to much. 
+I still got a "/" infront of the username. I tried searching on google and on YouTube to see 
+if someone had a similar problem, but with no success. Realizing that I wasn't going to be 
+able to solve this by myself I turned to Tutor Support for some input. The solution at the 
+end was to add the same *username* variable  as in to *@app.route ("/< username >"*  to 
+*@app.route("/crystals")* and use {{ username }} in profile.html as I did in the very beginning.
 
 * **Verdict**
 
-Text
+The username is displayed to the user as soon as they log in to the site, and they can also see 
+all of their added crystals.
 
 **Add crystal bug**
 * **Bug**
@@ -616,7 +621,7 @@ How to deploy project using Github pages:
 
 ## Credits
 
-* A special thank you to Jo at Tutor Support for taking the time and explaining in ways so that I could
+* A special thank you to Jo and Johann at Tutor Support for taking the time and explaining in ways so that I could
 understand when my brain felt like mashed potatoes and my confidence was low. 
 * A huge thank you to my mentor Simen Eventyret_mentor for all the good advices, feedback 
 and most of all patience.
