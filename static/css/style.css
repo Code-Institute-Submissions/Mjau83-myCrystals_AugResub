@@ -91,6 +91,11 @@ form i {
     background-color: #69677D
 }
 
+.form-btn:hover {
+    color: #ECB9AC;
+    background-color: #69677D
+}
+
 /* ------ Background displayed befor logging in */
 #crystal-background {
     height: 100vh;
