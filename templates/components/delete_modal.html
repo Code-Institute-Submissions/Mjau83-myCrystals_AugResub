@@ -1,16 +1,16 @@
 <div id="delete-crystal-{{loop.index}}" class="modal">
     <div class="modal-content">
-      <h4>Do you really want to delete {{ crystal.crystal_name }}?</h4>
-      <p>All information about this crystal will be permanently removed</p>
+        <h4>Do you really want to delete {{ crystal.crystal_name }}?</h4>
+        <p>All information about this crystal will be permanently removed</p>
     </div>
     <div class="modal-footer">
-        <a href="{{ url_for('view_crystals') }}" class="btn tooltipped" id="cancel" 
-            data-position="right" data-tooltip="Cancel">Cancel
+        <a href="{{ url_for('view_crystals') }}" class="btn tooltipped" id="cancel" data-position="right" data-tooltip="Cancel">
+            Cancel
             <i class="fas fa-arrow-left"></i>
         </a>
-        <a href="{{ url_for('delete_crystal', crystal_id=crystal._id)}}" class="modal-close btn tooltipped" 
-            id="delete" data-position="right" data-tooltip="Delete Crystal">Delete
+        <a href="{{ url_for('delete_crystal', crystal_id=crystal._id)}}" class="modal-close btn tooltipped" id="delete" data-position="right" data-tooltip="Delete Crystal">
+            Delete
             <i class="far fa-trash-alt"></i>
         </a>
     </div>
-  </div>
+</div>

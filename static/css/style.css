@@ -59,6 +59,13 @@ h3 {
     border-radius: 8px;
 }
 
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: rgb(143, 142, 160);
+    margin-top: 0px;
+}
+
 .search-bar {
     color: #69677D;
     background-color: rgba(234, 224, 230, 0.2);

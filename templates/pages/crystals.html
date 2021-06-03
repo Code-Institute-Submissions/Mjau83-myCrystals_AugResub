@@ -1,10 +1,7 @@
-{% extends "layout/base.html" %}
-{% block content %}
-{% include "components/navigation/user_navigation.html" %}
+{% extends "layout/base.html" %} {% block content %} {% include "components/navigation/user_navigation.html" %}
 <div class="container">
     <div id="add-crystal-bg">
         <div class="opaque-overlay">
-
             <!-- Search field -->
             <div class="row card search-bar">
                 {% include "components/forms/search_form.html" %}
@@ -15,8 +12,7 @@
                 <div class="col s12 m8 offset-m2">
                     {% if crystals|length > 0 %}
                     <ul class="collapsible expandable">
-                        {% for crystal in crystals %}
-                        {% if session.user|lower == crystal.crystal_owner|lower %}
+                        {% for crystal in crystals %} {% if session.user|lower == crystal.crystal_owner|lower %}
                         <li>
                             <div class="collapsible-header">
                                 <i class="far fa-gem"></i>
@@ -25,26 +21,23 @@
                                 </h6>
                                 {% if crystal.is_waterproof == "yes" %}
                                 <!-- Icon to specify if the crystal is waterproof and/or sunproof -->
-                                <i class="fas fa-tint tooltipped" id="drop-added" data-position="right"
-                                    data-tooltip="Waterproof Crystal"></i>
-                                {% endif %}
-                                {% if crystal.is_sunproof == "yes" %}
-                                <i class="fas fa-sun tooltipped" id="sun-added" data-position="right"
-                                    data-tooltip="Sunproof Crystal"></i>
+                                <i class="fas fa-tint tooltipped" id="drop-added" data-position="right" data-tooltip="Waterproof Crystal"></i>
+                                {% endif %} {% if crystal.is_sunproof == "yes" %}
+                                <i class="fas fa-sun tooltipped" id="sun-added" data-position="right" data-tooltip="Sunproof Crystal"></i>
                                 {% endif %}
                             </div>
                             <!-- Shows all info about the crystal -->
                             <div class="collapsible-body">
-                                <h6>Color: </h6>
+                                <h6>Color:</h6>
                                 <p>{{ crystal.color }}</p>
-                                <h6>Used for: </h6>
+                                <h6>Used for:</h6>
                                 <p>{{ crystal.usage }}</p>
-                                <h6>Chakra: </h6>
+                                <h6>Chakra:</h6>
                                 <p>{{ crystal.name_of_chakra }}</p>
-                                <h6>Quantity: </h6>
+                                <h6>Quantity:</h6>
                                 <p>{{ crystal.quantity }}</p>
                                 <div class="crystal-log">
-                                    <h6>Used last time: </h6>
+                                    <h6>Used last time:</h6>
                                     <p>{{ crystal.date_used }}</p>
                                     <h6>Method:</h6>
                                     <p>{{ crystal.name_of_method }}</p>
@@ -53,12 +46,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col s6 md3 center-align offset-m2">
-                                        <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}" class="btn tooltipped" id="edit" 
-                                            data-position="right" data-tooltip="Edit Crystal">
+                                        <a href="{{ url_for('edit_crystal', crystal_id=crystal._id)}}" class="btn tooltipped" id="edit" data-position="right" data-tooltip="Edit Crystal">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
-                                        <a href="#delete-crystal-{{loop.index}}" class="btn modal-trigger tooltipped" 
-                                            id="delete" data-position="right" data-tooltip="Delete Crystal">
+                                        <a href="#delete-crystal-{{loop.index}}" class="btn modal-trigger tooltipped" id="delete" data-position="right" data-tooltip="Delete Crystal">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
                                         {% include "components/delete_modal.html" %}
@@ -66,8 +57,7 @@
                                 </div>
                             </div>
                         </li>
-                        {% endif %}
-                        {% endfor %}
+                        {% endif %} {% endfor %}
                     </ul>
                     {% else %}
                     <h3 class="center-align">No Crystals Found</h3>

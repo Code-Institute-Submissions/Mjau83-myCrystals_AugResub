@@ -1,33 +1,26 @@
-{% extends "layout/base.html" %}
-{% block content %}
-{% include "components/navigation/index_navigation.html" %}
-    <div class="container">
-        <div id="crystal-background">
-            <div class="opaque-overlay">
-
-                <div class="row">
-                    <div class="col s12 m6 offset-m3">
-                        <div class="card">
-                            <div class="card-content center-align">
-                                <h3 class="center-align">Welcome to myCrystals</h3>
-                                <span class="card-title">your crystal helper on the web</span>
-                                <i class="far fa-gem"></i>
-                                <p>A digital way to store all your crystals in one place!</p>
-                                <p>Add them to your profile and access the information about them when you need
-                                    to. You can also keep track of how you are using them in you everyday
-                                    spiritual practice.
-                                </p>
-                            </div>
-                            <div class="card center-align">
-                                <a href="{{ url_for('register')}}">Register</a>
-                                <a href="{{ url_for('login')}}">Log In</a>
-                            </div>
+{% extends "layout/base.html" %} {% block content %} {% include "components/navigation/index_navigation.html" %}
+<div class="container">
+    <div id="crystal-background">
+        <div class="opaque-overlay">
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    <div class="card">
+                        <div class="card-content center-align">
+                            <h3 class="center-align">Welcome to myCrystals</h3>
+                            <span class="card-title">your crystal helper on the web</span>
+                            <i class="far fa-gem"></i>
+                            <p>A digital way to store all your crystals in one place!</p>
+                            <p>Add them to your profile and access the information about them when you need to. You can also keep track of how you are using them in you everyday spiritual practice.</p>
+                        </div>
+                        <div class="card center-align">
+                            <a href="{{ url_for('register')}}">Register</a>
+                            <a href="{{ url_for('login')}}">Log In</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}

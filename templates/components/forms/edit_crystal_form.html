@@ -3,16 +3,14 @@
         <!-- crystal name -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="crystal_name" name="crystal_name" minlength="3" maxlength="25" type="text" 
-                    value="{{ crystal.crystal_name }}" class="validate" required>
+                <input id="crystal_name" name="crystal_name" minlength="3" maxlength="25" type="text" value="{{ crystal.crystal_name }}" class="validate" required />
                 <label for="crystal_name">Name</label>
             </div>
         </div>
         <!-- color -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="color" name="color" minlength="3" maxlength="25" type="text" 
-                    value="{{ crystal.color }}" class="validate" required>
+                <input id="color" name="color" minlength="3" maxlength="25" type="text" value="{{ crystal.color }}" class="validate" required />
                 <label for="color">Color</label>
             </div>
         </div>
@@ -30,9 +28,9 @@
             <label for="is_waterproof">
                 <i class="fas fa-tint" id="drop-add"></i>
                 {% if crystal.is_waterproof == "yes" %}
-                    <input id="is_waterproof" type="checkbox" name="is_waterproof" class="filled-in" checked="checked" />
+                <input id="is_waterproof" type="checkbox" name="is_waterproof" class="filled-in" checked="checked" />
                 {% else %}
-                    <input id="is_waterproof" type="checkbox" name="is_waterproof" class="filled-in"/>
+                <input id="is_waterproof" type="checkbox" name="is_waterproof" class="filled-in" />
                 {% endif %}
                 <span>Waterproof</span>
             </label>
@@ -42,9 +40,9 @@
             <label for="is_sunproof">
                 <i class="fas fa-sun" id="sun-add"></i>
                 {% if crystal.is_sunproof == "yes" %}
-                    <input id="is_sunproof" type="checkbox" name="is_sunproof" class="filled-in" checked="checked" />
+                <input id="is_sunproof" type="checkbox" name="is_sunproof" class="filled-in" checked="checked" />
                 {% else %}
-                    <input id="is_sunproof" type="checkbox" name="is_sunproof" class="filled-in"/>
+                <input id="is_sunproof" type="checkbox" name="is_sunproof" class="filled-in" />
                 {% endif %}
                 <span>Sunproof</span>
             </label>
@@ -54,42 +52,37 @@
             <div class="input-field col s12">
                 <select id="name_of_chakra" name="name_of_chakra" class="validate">
                     <option value="" disabled>Pick a Chakra</option>
-                    {% for chakra in chakras %}
-                        {% if chakra.name_of_chakra == crystal.name_of_chakra %}
-                            <option value="{{ chakra.name_of_chakra }}" selected>{{ chakra.name_of_chakra }}</option>
-                        {% else %}
-                            <option value="{{ chakra.name_of_chakra }}">{{ chakra.name_of_chakra }}</option>
-                        {% endif %}
-                    {% endfor %}
-                </select> 
+                    {% for chakra in chakras %} {% if chakra.name_of_chakra == crystal.name_of_chakra %}
+                    <option value="{{ chakra.name_of_chakra }}" selected>{{ chakra.name_of_chakra }}</option>
+                    {% else %}
+                    <option value="{{ chakra.name_of_chakra }}">{{ chakra.name_of_chakra }}</option>
+                    {% endif %} {% endfor %}
+                </select>
                 <label for="name_of_chakra">Chakra</label>
             </div>
         </div>
         <!-- quantity -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="quantity" name="quantity" minlength="1" maxlength="150" type="text" 
-                    value="{{ crystal.quantity }}" class="validate" required>
+                <input id="quantity" name="quantity" minlength="1" maxlength="150" type="text" value="{{ crystal.quantity }}" class="validate" required />
                 <label for="quantity">Quantity</label>
             </div>
         </div>
         <!-- date last used -->
         <div>
             <i class="fas fa-calendar-day"></i><label for="date_used">Date: </label>
-            <input id="date_used" name="date_used" type="text" value="{{ crystal.date_used }}" class="datepicker validate" placeholder="Select date">
+            <input id="date_used" name="date_used" type="text" value="{{ crystal.date_used }}" class="datepicker validate" placeholder="Select date" />
         </div>
         <!-- dropdown for methods -->
         <div class="row">
             <div class="input-field col s12">
                 <select id="name_of_method" name="name_of_method" class="validate">
                     <option value="" disabled>Pick a Method</option>
-                    {% for method in usage_method %}
-                        {% if method.name_of_method == crystal.name_of_method %}
-                            <option value="{{ method.name_of_method }}" selected>{{ method.name_of_method }}</option>
-                        {% else %}
-                            <option value="{{ method.name_of_method }}">{{ method.name_of_method }}</option>
-                        {% endif %}
-                    {% endfor %}
+                    {% for method in usage_method %} {% if method.name_of_method == crystal.name_of_method %}
+                    <option value="{{ method.name_of_method }}" selected>{{ method.name_of_method }}</option>
+                    {% else %}
+                    <option value="{{ method.name_of_method }}">{{ method.name_of_method }}</option>
+                    {% endif %} {% endfor %}
                 </select>
                 <label for="name_of_method">Method</label>
             </div>
@@ -106,13 +99,11 @@
         <!-- edit crystal button -->
         <div class="row">
             <div class="col s6 md3 center-align offset-m2">
-                <button type="submit" class="btn tooltipped" id="edit" data-position="right" 
-                    data-tooltip="Edit Crystal">
+                <button type="submit" class="btn tooltipped" id="edit" data-position="right" data-tooltip="Edit Crystal">
                     <i class="fas fa-pencil-alt"></i>
                 </button>
                 <!-- cancel button-->
-                <a href="{{ url_for('view_crystals') }}" class="btn tooltipped" id="cancel" data-position="right" 
-                    data-tooltip="Cancel">
+                <a href="{{ url_for('view_crystals') }}" class="btn tooltipped" id="cancel" data-position="right" data-tooltip="Cancel">
                     <i class="fas fa-arrow-left"></i>
                 </a>
             </div>
