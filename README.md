@@ -315,15 +315,19 @@ I log in to the site and the search bar is displayed att the top on all devices.
 Garnet commes up as I have added it yo the db with the usage property of grounding. This also works if I do a
 search for "Meditaion" or search for a name of a crystal.
 After testing it a couple of times I realize that searching for the name might not be as useful. It might be
-better to be able to do a search for a specific chakra instead.
+better to be able to do a search for a specific chakra instead, so the user can find a crystalfor a specific
+chakra in a easy way. I droped the index in MongoDB and created a new one targeting Usage, Chakra and method
+instead.
 
 * Result
 
-Text
+When the user loggs in to the website the search bar is accessed at the top of the page, and the user can
+search for a preaviously saved usage purpose, method or chakra. The result is displayed to the user as a
+accordion that can be clicked to show all the information.
 
 * Verdict 
 
-Text
+The search function works as planned and shows the results for the user.
 
 **As a user I want to, be able to edit/update my information**
 
