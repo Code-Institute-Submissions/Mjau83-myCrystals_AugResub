@@ -20,6 +20,9 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
+    """
+    Loads the homepage
+    """
     return render_template("pages/index.html")
 
 
@@ -34,6 +37,9 @@ def view_crystals():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Lets the user search the db for the crystals
+    """
     query = request.form.get("query")
     crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
     return render_template("pages/crystals.html", crystals=crystals)
@@ -161,7 +167,7 @@ def add_crystal():
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
     """
-    Lets the user edit and update information about 
+    Lets the user edit and update information about
     a specific crystal to the db
     """
     if request.method == "POST":
