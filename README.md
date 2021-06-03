@@ -107,7 +107,43 @@ Balsamiq was used to create the wireframes for this project
 
 ## Database Structure
 
-Add tables here
+To set up the database I used MongoDB for this project.
+I added the following collections:
+
+### Crystals:
+**_id:** | **ObjectId**
+------------ | -------------
+crystal_name | String
+color | String
+usage | String
+is_waterproof | String
+is_sunproof | String
+name_of_chakra | String
+quantity | String
+date_used | String
+name_of_method | String
+notes | String
+crystal_owner | String
+
+
+### Chakras:
+**_id:** | **ObjectId**
+------------ | -------------
+name_of_chakra | String
+
+
+### Usage_method:
+**_id:** | **ObjectId**
+------------ | -------------
+name_of_method | String
+
+
+### Users:
+**_id:** | **ObjectId**
+------------ | -------------
+username | String
+password | String
+
 
 [Back to top](#table-of-content)
 
@@ -146,7 +182,6 @@ the project
 * [Gimp](https://www.gimp.org/) was used to edit photos.
 * [Favicon.cc](https://www.favicon.cc/) was used to create the fave icon
 * [Webformatter](https://webformatter.com/html) was used to beautify the code
-??* [Copressor.io](https://compressor.io/) was used to compress the background image
 * [Gitpod](https://gitpod.io/) was used for coding the project
 * [Github](https://github.com/) was used to save and stored on the project after being 
 pushed from Gitpod. Github was also use to deploy the site
