@@ -133,7 +133,7 @@ def logout():
 
 
 # Add a new crystal to db
-@app.route("/add_crystal", methods=["GET", "POST"])
+@app.route("/add/crystal", methods=["GET", "POST"])
 def add_crystal():
     """
     Adds a new crystal and information about it to the db
@@ -164,7 +164,7 @@ def add_crystal():
 
 
 # Edit crystal
-@app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
+@app.route("/edit/crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
     """
     Lets the user edit and update information about
@@ -197,7 +197,7 @@ def edit_crystal(crystal_id):
 
 
 # Delete crystal
-@app.route("/delete_crystal/<crystal_id>")
+@app.route("/delete/crystal/<crystal_id>")
 def delete_crystal(crystal_id):
     """
     Lets the user delete a specific crystal
