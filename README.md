@@ -241,13 +241,34 @@ Both log in and log out function works as planned
 
 * Plan
 
-I wanted to create a form for the user so they can add their crystals and store information about them.
+I wanted to create a form for the user so they can add their crystals and store them in the db
+
+* Implementation
+
+I created a form for the user to add crystals to their userprofile and didn't set any limit to it.
+
+* Test
+I tried adding a number of different crystals to different users.
+
+* Result
+
+Crystals are added to the db.
+
+* Verdict 
+
+The Add Crystal form works as planned 
+
+**As a user I want to, add information about each crystal**
+
+* Plan
+
+I wanted the user to bale to add information about each crystal using a form.
 The form should hold information about such things as name, color, usage proper and chakras. But I also
 wanted the user to be able keep a little bit of track of how and when they use their crystals, if they liked. 
 
 * Implementation
 
-I created a form for the user to add crystals to their userprofile. In the for they can add name, color,
+I created a form for the user to add crystals to their userprofile. In the form they can add name, color,
 usage, mark if the crystal is waterproof and/or sunproof, choose the chakras represented by that
 crystal, add number of crystals they own, pick a date when it was last used, choose what it was
 used for and add a note. When the user clicks on the "Add Crystal" button a flash message will tell
@@ -273,28 +294,6 @@ a good overlook of all the crystals, and also access the information about each 
 * Verdict 
 
 The Add Crystal form works as planned 
-
-**As a user I want to, add information about each crystal**
-
-* Plan
-
-Text
-
-* Implementation
-
-Text
-
-* Test
-
-Text
-
-* Result
-
-Text
-
-* Verdict 
-
-Text
 
 **As a user I want to, be able to search for specific properties**
 
@@ -322,67 +321,91 @@ Text
 
 * Plan
 
-Text
+I want the user to be able to edit the information they have added about each crystal, so they can update
+the number of crystals they have, change the date when it last was used and what it was used for.
 
 * Implementation
 
-Text
+I created form that looked the same as the Add Crystal form and using ObjectId it gets the already added 
+information about a specific crystal and shows it to the user. The form is access through the "Edit" button
+for each crystal, so the user knows which crystal that is being edited. The user can then change any 
+information in the form and update it to the db. When the update is done a flash message is displayed saying
+"Your Crystal Is Updated!", and the new information is showed in the accordion for that crystal when the user
+click on "Cancel" or "Crystals" in the navbar. 
 
 * Test
 
-Text
+I tried edit the information about the crystals, such as changing the date, changing chakra, changing method,
+quantity etc. All feilds in the form updates to the db and shows the new information to the user. If I check
+the box for waterproof that wasn't checked befor the drop icon appers in the accordion header.
 
 * Result
 
-Text
+The new information is updated to the db and shown to the user when they click on the accordion.
 
 * Verdict 
 
-Text
+The edit form works as planned
 
 **As a user I want to, be able to delete a crystal**
 
 * Plan
 
-Text
+The user should be able to delete a crystal if they no longer use it of have it. But it shouldn't be to easy to 
+delete a crystal and I want to check wth the user that they are sure that they want to delete it.
 
 * Implementation
 
-Text
+In the accordion next to the "Edit" button I created a "Delete" button so that the user knows which crystal 
+that's being deleted. But to be sure the user knows that the removal is permanent I added a modal asking the
+user if they are sure that they want to remove the crystal from the db. They can then choose to Cancel the 
+process or to continue and Delete the crystal.
 
 * Test
 
-Text
+To test this I added some crystals to a userprofile, and then used the "Delete" button to remove them. everytime
+I clicked the Delete button the modal popped up asking "Do you really want to delete {{ crystal.crystal_name }}?"
+When I clicked Cancel I got redirected to the userprofile and the crystal was still visable. When I cicked 
+Delete the crystal was removed and no longer visable in the userprofile or in the db.
 
 * Result
 
-Text
+The modal shows up to ensure that the user want to proceed deleting the crystal, and when they do it is removed
+from the userprofile and db. The user can also cancel the process and then the crystal is left where it was.
 
 * Verdict 
 
-Text
+The "Delete" button and modal work as planned
 
 **As a user I want to, be able to journal when a crystal last was used**
 
 * Plan
 
-Text
+I wanted the user to be able to track how and when they are using their crystals. They should be able to
+pick a date and also choose which method they are using. I also want them to have the possability to a some
+notes if they like.
 
 * Implementation
 
-Text
+In the Add Crystal form I have added a datepicker so that the user pick a date for when they last used their
+crystal. They can also choose how they used it by picking ne of the options in the dropdown. They can choose 
+from meditaion, healing, ritual, tarot or other. I also added a textarea so the user can add a short description
+so they easily can track their usage.
 
 * Test
 
-Text
+When I tried adding crystals used the datepicker to select the date, it also prevents the user form adding a date
+manually by them self. I can choos a method from the dropdown, and if I choose "Other" I can use the textarea
+specific what I did or the feeling I had. When added allthis shows up in the accordion for that specific crystal.
 
 * Result
 
-Text
+The user can keep a simple journal of when and how they are using their crystals, by using the parts of the form
+designed for keeping track of that.
 
 * Verdict 
 
-Text
+The user can track when and how they use their crystals in a simple way.
 
 [Back to top](#table-of-content)
 
