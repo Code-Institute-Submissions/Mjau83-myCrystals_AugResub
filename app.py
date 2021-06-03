@@ -32,7 +32,11 @@ def view_crystals():
     Shows all added crystals to the user
     """
     crystals = list(mongo.db.crystals.find())
-    return render_template("pages/crystals.html", crystals=crystals)
+
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    return render_template("pages/crystals.html", crystals=crystals, username=username)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -91,7 +95,7 @@ def login():
                                    request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 return redirect(url_for(
-                        "view_crystals", username=session["user"]))
+                        "view_crystals", username=request.form.get("username").lower()))
             else:
                 # invalid password
                 flash(
