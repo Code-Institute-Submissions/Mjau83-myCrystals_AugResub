@@ -586,14 +586,6 @@ that they want to delete a crystal.
 [Back to top](#table-of-content)
 
 
-## To Do
-* 
-* 
-* 
-
-[Back to top](#table-of-content)
-
-
 ## Deployment
 ### GitHub Pages
 How to deploy project using Github pages:
@@ -613,9 +605,44 @@ How to deploy project using Github pages:
 
 ### Heroku deployment
 
+1. Login to your Heroku account and create a new app with a uniqe name. Select the region you live in.
+
+2. Look in your repo to make sure that the Procfile and requirements.txt files exist. They need to be pushed to the repo
+befor you deploy the projecy on Heroku.
+Requirements:
+
+ >pip3 freeze --local > requirements.txt
+
+Procfile:
+
+> echo web: python app.py > Procfile
+
+3. The Procfile should contain the line below. If there's a blank line in the file, remove it.
+
+> web: python app.py
+
+4. On the Heroku page, scroll down to the "deployment method"-section nad choose "Github" for automatic deployment.
+
+5. Make sure your github profile is displayed, and then enter the name for your repo then click "search". 
+When your repo i showing, click the "connect" button.
+
+6. Scroll back up to "settings" and click on the tab. Then click on "Reveal config vars". Add the same variables as in 
+your env.py (IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME): Don't add the DEBUG variable in under config vars, 
+only in your env.py to prevent DEBUG being active on live website.
+
+>IP = 0.0.0.0
+>PORT = 5000
+>SECRET_KEY = YOUR_SECRET_KEY
+>MONGO_URI = YOUR_MONGODB_URI
+>MONGO_DBNAME = DATABASE_NAME
 
 
+7. Click on the "Deploy" tab. Scroll down and click "Enable automatic deployment".
 
+8. Just beneath, click on "Deploy branch". Heroku will now start building your app, and it can take a few minutes. 
+When the build is done, click "view app" to open it.
+
+9. To commit your changes to the branch, use "git push" to push your changes.
 
 [Back to top](#table-of-content)
 
