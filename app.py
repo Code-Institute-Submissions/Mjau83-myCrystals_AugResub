@@ -160,6 +160,10 @@ def add_crystal():
 # Edit crystal
 @app.route("/edit_crystal/<crystal_id>", methods=["GET", "POST"])
 def edit_crystal(crystal_id):
+    """
+    Lets the user edit and update information about 
+    a specific crystal to the db
+    """
     if request.method == "POST":
         is_waterproof = "yes" if request.form.get("is_waterproof") else "no"
         is_sunproof = "yes" if request.form.get("is_sunproof") else "no"
@@ -189,8 +193,11 @@ def edit_crystal(crystal_id):
 # Delete crystal
 @app.route("/delete_crystal/<crystal_id>")
 def delete_crystal(crystal_id):
+    """
+    Lets the user delete a specific crystal
+    and remove it from the db
+    """
     mongo.db.crystals.remove({"_id": ObjectId(crystal_id)})
-    flash("Your Crystal Is Deleted!")
     return redirect(url_for("view_crystals"))
 
 

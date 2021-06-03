@@ -1,8 +1,8 @@
 # myCrystals
-### A handy way to organize your crystals
+### your crystal helper on the web
 
 
-![Responsive Image](assets/images/responsive-image.png)
+![Responsive Image](static/images/responsive-image.png)
 
 
 ## Project Goals
@@ -71,17 +71,18 @@ site can help us get a little bit more organized.
 #### Fonts:
 
 I used fonts from [Google Fonts](https://fonts.google.com/)
-* [Fontname] text
+* [Poiret One](https://fonts.google.com/specimen/Poiret+One?query=Poiret+On) was used for the headings
+* [Open Sanse](https://fonts.google.com/specimen/Open+Sans?query=Open+Sans) was used for the text
 
 #### Images:
 
-Text about image source
+All images are my own and is taken by me using eihter my Sony Xperia or my Canon EOS450D. All images are also edited by me using Gimp.
 
 #### Color: 
 
-Text about colors
+I wanted to have soft and light colors to match the background
 
-![Color palette](assets/images/color-palette.png)
+![Color palette](static/images/myCrystals.png)
 
 [Back to top](#table-of-content)
 
