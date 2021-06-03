@@ -164,12 +164,12 @@ password | String
 ## Features
 * Responsive on different devices
 * Login and Logout functionallity
-* Search crystals by properties, color or journal
+* Search crystals by usage, chakra or usage method (such as mediation, ritual etc)
 * CRUD:
     * Create - Possability to add new crystals and to journal the usage
     * Read - Possability to view the added information about each crystal and to see when and how it was last used
     * Update - Possability to update the information and the journal for each crystal 
-    * Delete - Possability to delete a crystal and/or the journal 
+    * Delete - Possability to delete a crystal 
 
 [Back to top](#table-of-content)
 
@@ -514,7 +514,7 @@ I finaly got it to work.
 Everything on the index.html page is now clickable and working as it should. 
 
 
-**Username bug**
+# **Username bug**
 * **Bug**
 
 The username won't show at the top of the crystals.html
@@ -604,20 +604,24 @@ How to deploy project using Github pages:
 9. Scroll back down to "Github Pages"
 10. A green alert box will now tell you that your site been published and provide you a link to the site.
 
-![Deployment Image](assets/images/deployment.png)
+![Deployment Image](static/images/deployment.png)
+
+### Heroku deployment
+
+
+
+
 
 [Back to top](#table-of-content)
 
 ## Credits
-#### Inspiration 
-* [ ]( )
-* [ ]( )
 
-* Thank you to...
+* A special thank you to Jo at Tutor Support for taking the time and explaining in ways so that I could
+understand when my brain felt like mashed potatoes and my confidence was low. 
 * A huge thank you to my mentor Simen Eventyret_mentor for all the good advices, feedback 
 and most of all patience.
 * Thank you to my older brother David who’s been a wonderful support in me deepest times of 
-dispear and helped me with testing and good advices to help me get a better understanding for the code.
-You're the best!
+dispear and helped me with testing and good advices along the way. And for helping me get a better 
+understanding for the code. You're the best!
 
 [Back to top](#table-of-content)
