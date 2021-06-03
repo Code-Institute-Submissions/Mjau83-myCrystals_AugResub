@@ -87,15 +87,15 @@ def login():
 
         if existing_user:
             # does password match user?
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    return redirect(url_for(
+            if check_password_hash(existing_user["password"],
+                                   request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for(
                         "view_crystals", username=session["user"]))
             else:
                 # invalid password
                 flash(
-                    "The Username and/or Password is incorrect. Please try again")
+                 "The Username and/or Password is incorrect. Please try again")
                 return redirect(url_for("login"))
         else:
             # username dosen't exist
@@ -159,8 +159,8 @@ def add_crystal():
 
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
-    return render_template("pages/add_crystal.html", chakras=chakras, 
-        usage_method=usage_method)
+    return render_template("pages/add_crystal.html", chakras=chakras,
+                           usage_method=usage_method)
 
 
 # Edit crystal
@@ -192,8 +192,8 @@ def edit_crystal(crystal_id):
     crystal = mongo.db.crystals.find_one({"_id": ObjectId(crystal_id)})
     chakras = mongo.db.chakras.find().sort("chakras", 1)
     usage_method = mongo.db.usage_method.find().sort("usage_method", 1)
-    return render_template("pages/edit_crystal.html", crystal=crystal, 
-        chakras=chakras, usage_method=usage_method)
+    return render_template("pages/edit_crystal.html", crystal=crystal,
+                           chakras=chakras, usage_method=usage_method)
 
 
 # Delete crystal
