@@ -300,15 +300,22 @@ The Add Crystal form works as planned
 
 * Plan
 
-Text
+I wanted the user to be able to search through all the crystals they have added if they wanted to find a
+crystal to use for a specific purpose.
 
 * Implementation
 
-Text
+I created a search bar at the top of the page so that it's easy to access it as soon as the user loggs in.
+The search bar is connected to a index in MongoDB and it was created in the terminal. It allows the user to
+serach for crystal name, usage and method.
 
-* Test
+* Test 
 
-Text
+I log in to the site and the search bar is displayed att the top on all devices. If I search for "grounding"
+Garnet commes up as I have added it yo the db with the usage property of grounding. This also works if I do a
+search for "Meditaion" or search for a name of a crystal.
+After testing it a couple of times I realize that searching for the name might not be as useful. It might be
+better to be able to do a search for a specific chakra instead.
 
 * Result
 
