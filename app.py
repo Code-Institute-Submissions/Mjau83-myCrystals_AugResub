@@ -95,28 +95,27 @@ def login():
             else:
                 # invalid password
                 flash(
-                 "The Username and/or Password is incorrect. Please try again")
+                 "The Username and/or Password is incorrect. Try again")
                 return redirect(url_for("login"))
         else:
             # username dosen't exist
             flash(
-                "The Username and/or Password is incorrect. Please try again")
+                "The Username and/or Password is incorrect. Try again")
             return redirect(url_for("login"))
 
     return render_template("pages/login.html")
 
 
-@app.route("/crystals", methods=["GET", "POST"])
-def profile():
+@app.route("/<username>", methods=["GET", "POST"])
+def profile(username):
     """
     grab only the user's username from db
     """
-    username_in_db = mongo.db.users.find_one(
+    username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        print(username_in_db)
-        return render_template("pages/crystals.html", username=username_in_db)
+        return render_template("pages/crystals.html", username=username)
 
     return redirect(url_for("login"))
 

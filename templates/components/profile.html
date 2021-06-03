@@ -7,7 +7,7 @@
             <div class="card-panel">
                 <div class="center-align">
                     <h3>
-                        Hello {{  username }}
+                        Hello {{ url_for('profile', username=session['user']) }}
                     </h3>
                 </div>
             </div>

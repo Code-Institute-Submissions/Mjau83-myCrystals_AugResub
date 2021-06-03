@@ -88,19 +88,32 @@ I wanted to have soft and light colors to match the background
 
 
 ## Wireframes
-Balsamiq was used to create the wireframes for this project
+Balsamiq was used to create the wireframes for this project. I originally 
+wanted to have a link in the navbar to the journal section. But after thinking about
+it for a couple of times I realized that much easier for the user to get a overview 
+of the information for each crystal if the journal and the crystal information is in
+one place.
 
 * Desktop Wireframes
-    * [Index](wireframes/index.png)
-    * [ ]( )
+    * [Index](wireframes/index-dskt.png)
+    * [Home](wireframes/home-dskt.png)
+    * [Journal](wireframes/journal-dskt.png )
+    * [Add New Crystal](wireframes/add-new-crystal-dskt.png)
+    * [Add New Journal](wireframes/add-journal-dskt.png)
     
 * Tablet Wireframes
-    * [Index](wireframes/index-tablet.png)
-    * [ ]( )
+    * [Index](wireframes/index-tab.png)
+    * [Home](wireframes/home-tab.png)
+    * [Journal](wireframes/journal-tab.png)
+    * [Add New Crystal](wireframes/add-new-crystal-tab.png)
+    * [Add New Journal](wireframes/add-journal-tab.png)
 
 * Smartphone Wireframes 
     * [Index](wireframes/index-sp.png)
-    * [ ]( )
+    * [Home](wireframes/home-sp.png)
+    * [Journal](wireframes/journal-sp.png)
+    * [Add New Crystal](wireframes/add-new-crystal-sp.png)
+    * [Add New Journal](wireframes/add-journal-sp.png)
 
 [Back to top](#table-of-content)
 
