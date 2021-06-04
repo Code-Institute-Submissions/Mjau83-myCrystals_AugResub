@@ -36,7 +36,8 @@ def view_crystals():
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    return render_template("pages/crystals.html", crystals=crystals, username=username)
+    return render_template("pages/crystals.html", crystals=crystals,
+                           username=username)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -45,6 +46,7 @@ def search():
     Lets the user search the db for the crystals
     """
     query = request.form.get("query")
+
     crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
     return render_template("pages/crystals.html", crystals=crystals)
 
@@ -95,7 +97,8 @@ def login():
                                    request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 return redirect(url_for(
-                        "view_crystals", username=request.form.get("username").lower()))
+                        "view_crystals", username=request.form.get(
+                            "username").lower()))
             else:
                 # invalid password
                 flash(
