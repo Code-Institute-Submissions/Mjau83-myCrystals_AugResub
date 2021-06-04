@@ -7,7 +7,8 @@
 
 ## Project Goals
 **What is it?** 
-A simple way to store information about your crystals so that you can access the information when you need it.
+A simple way to digitaly store your crystals and information about them, so that you can access 
+the information when you need it.
 
 **Who is it for?**
 This is for any healer, witch, yogi or anyone that likes spriritual stuff and might use crystals in their daily life, 
@@ -90,7 +91,7 @@ I wanted to have soft and light colors to match the background
 ## Wireframes
 Balsamiq was used to create the wireframes for this project. I originally 
 wanted to have a link in the navbar to the journal section. But after thinking about
-it for a couple of times I realized that much easier for the user to get a overview 
+it for a couple of times I realized that it's much easier for the user to get a overview 
 of the information for each crystal if the journal and the crystal information is in
 one place.
 
@@ -99,21 +100,21 @@ one place.
     * [Home](wireframes/home-dskt.png)
     * [Journal](wireframes/journal-dskt.png )
     * [Add New Crystal](wireframes/add-new-crystal-dskt.png)
-    * [Add New Journal](wireframes/add-journal-dskt.png)
+    * [Add New Journal](wireframes/add-journal-log-dskt.png)
     
 * Tablet Wireframes
     * [Index](wireframes/index-tab.png)
     * [Home](wireframes/home-tab.png)
     * [Journal](wireframes/journal-tab.png)
     * [Add New Crystal](wireframes/add-new-crystal-tab.png)
-    * [Add New Journal](wireframes/add-journal-tab.png)
+    * [Add New Journal](wireframes/add-journal-log-tab.png)
 
 * Smartphone Wireframes 
     * [Index](wireframes/index-sp.png)
     * [Home](wireframes/home-sp.png)
     * [Journal](wireframes/journal-sp.png)
     * [Add New Crystal](wireframes/add-new-crystal-sp.png)
-    * [Add New Journal](wireframes/add-journal-sp.png)
+    * [Add New Journal](wireframes/add-journal-log-sp.png)
 
 [Back to top](#table-of-content)
 
@@ -204,8 +205,8 @@ pushed from Gitpod. Github was also use to deploy the site
 
 ## Testing
 
-The was tested for Android on Samsung A50 and Xperia 10. It was also tested on laptop
-and desktop view (PC).
+The website was tested for Android on Samsung A50 and Xperia 10, and on Iphone 11 pro plus
+It was also tested on laptop and desktop view (PC).
 
 The code was tested with:
 * [W3C Markup Validator](https://validator.w3.org/)
@@ -609,6 +610,7 @@ How to deploy project using Github pages:
 
 2. Look in your repo to make sure that the Procfile and requirements.txt files exist. They need to be pushed to the repo
 befor you deploy the projecy on Heroku.
+
 Requirements:
 
  >pip3 freeze --local > requirements.txt
@@ -631,10 +633,15 @@ your env.py (IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME): Don't add the DE
 only in your env.py to prevent DEBUG being active on live website.
 
 >IP = 0.0.0.0
+>
 >PORT = 5000
+>
 >SECRET_KEY = YOUR_SECRET_KEY
+>
 >MONGO_URI = YOUR_MONGODB_URI
+>
 >MONGO_DBNAME = DATABASE_NAME
+
 
 
 7. Click on the "Deploy" tab. Scroll down and click "Enable automatic deployment".
@@ -648,6 +655,8 @@ When the build is done, click "view app" to open it.
 
 ## Credits
 
+
+* Thank you to family and friends for helping out with testing and feedback of the website.
 * A special thank you to Jo and Johann at Tutor Support for taking the time and explaining in ways so that I could
 understand when my brain felt like mashed potatoes and my confidence was low. 
 * A huge thank you to my mentor Simen Eventyret_mentor for all the good advices, feedback 
