@@ -110,6 +110,7 @@ form i {
     position: relative; 
     z-index: 0;
 }
+
 /* ------ Background displayed after logging in */
 #add-crystal-bg {
     height: 100vh;

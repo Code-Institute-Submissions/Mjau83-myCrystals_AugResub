@@ -5,10 +5,8 @@ $(document).ready(function(){
     $('.tooltipped').tooltip();
     /* dropdown in form */
     $('select').formSelect();
-
     /* modal for deleting a crystal */
     $('.modal, .modal-trigger').modal();
-
     /* date used */
     $('.datepicker').datepicker({
         format: "dd mmmm, yyyy",

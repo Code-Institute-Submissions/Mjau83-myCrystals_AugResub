@@ -29,7 +29,7 @@ def index():
 @app.route("/crystals")
 def view_crystals():
     """
-    Shows all added crystals to the user
+    Shows all added crystals and username to the user
     """
     crystals = list(mongo.db.crystals.find())
 
@@ -50,6 +50,7 @@ def search():
     crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+        
     return render_template("pages/crystals.html", crystals=crystals,
                            username=username)
 
