@@ -188,6 +188,10 @@ ul.collapsible.expandable {
     font-family: 'Open Sans', sans-serif;
 }
 
+.collapsible-body h6 {
+    text-transform: uppercase;
+}
+
 /* ------ Add crystal */
 #drop-add, #sun-add {
     font-size: 20px;
