@@ -35,7 +35,7 @@ h3 {
     font-family: 'Poiret One', cursive;
 }
 
-/* ------ Cards and Forms */
+/* ------ Cards, Forms, Modal */
 .card {
     color: #69677D;
     background-color: rgba(234, 224, 230, 0.2);
@@ -93,6 +93,10 @@ form i {
 .form-btn:hover {
     color: #ECB9AC;
     background-color: #69677D
+}
+
+.modal {
+    border-radius: 8px;
 }
 
 /* ------ Background displayed befor logging in */
