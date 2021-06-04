@@ -48,7 +48,10 @@ def search():
     query = request.form.get("query")
 
     crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
-    return render_template("pages/crystals.html", crystals=crystals)
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("pages/crystals.html", crystals=crystals,
+                           username=username)
 
 
 # Register page
