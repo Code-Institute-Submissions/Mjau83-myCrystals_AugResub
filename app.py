@@ -50,7 +50,7 @@ def search():
     crystals = list(mongo.db.crystals.find({"$text": {"$search": query}}))
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-        
+    
     return render_template("pages/crystals.html", crystals=crystals,
                            username=username)
 
